@@ -16,7 +16,7 @@ abstract class MathExpr(val mathOperation: MathOperation) {
 
     /**
      * Every concrete implementation of a MathExpr generates its expression in polish notation
-     * by first adding it's MathOperation and then depending on the location of it's sub expressions and
+     * by first adding it's MathOperation and then depending on the location of its sub expressions and
      * whether or not the expression is bounded.
      *
      */
@@ -36,7 +36,7 @@ abstract class MathExpr(val mathOperation: MathOperation) {
     }
 
     /**
-     * Let's the implementation of MathExpr know that it is a bounded sub-expression
+     * Lets the implementation of MathExpr know that it is a bounded sub-expression
      */
     internal fun setBound(bound: Int) {
         this.bound = bound

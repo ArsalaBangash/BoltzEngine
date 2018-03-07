@@ -35,7 +35,6 @@ class LatexConverter {
     }
 
     init {
-
         opRepresentationMap.put(MathOperation.Addition, addLatex)
         opRepresentationMap.put(MathOperation.Subtraction, subLatex)
         opRepresentationMap.put(MathOperation.Multiplication, multLatex)
