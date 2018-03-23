@@ -10,10 +10,11 @@
 
 int random(int min, int max)
 {
-    std::default_random_engine gen (std::chrono::system_clock::now().time_since_epoch().count());
+    std::default_random_engine gen ((unsigned int)std::chrono::system_clock::now().time_since_epoch().count());
     std::uniform_real_distribution<double> dist(min, max);
     return (int) dist(gen);
 }
+
 int generateNonZero(int absoluteRange)
 {
     int num = random(-absoluteRange, absoluteRange);
