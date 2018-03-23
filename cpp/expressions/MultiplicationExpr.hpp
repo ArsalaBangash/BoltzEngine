@@ -19,6 +19,7 @@ class MultiplcationExpr: public MathExpr
     void noSubExpressions();
     void twoSubExpressions();
     void oneSubExpressions(SubExprLocation);
+    std::vector<ExprToken> produceExpression(SubExprLocation);
     
 private:
     std::vector<int> multiples;
