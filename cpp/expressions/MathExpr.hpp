@@ -38,11 +38,8 @@ public:
      * whether or not the expression is bounded
      */
     std::vector<ExprToken> produceExpression(SubExprLocation subExprLocation);
-private:
     
-    /* Lets the implementation of MathExpr know that it is a bounded sub-expression */
-    void setBound(int bound);
-    
+protected:
     /* Adds operands to the MathExpr */
     virtual void noSubExpressions();
     
@@ -58,6 +55,10 @@ private:
     
     /* Sets the maximum value for an operand based on the [difficulty] of the expression */
     virtual void setMax(Level level);
+    
+private:
+    /* Lets the implementation of MathExpr know that it is a bounded sub-expression */
+    void setBound(int bound);
 };
 
 #endif /* MathExpr_hpp */
