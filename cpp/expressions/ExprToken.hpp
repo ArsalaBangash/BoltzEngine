@@ -13,9 +13,7 @@
 
 class ExprToken
 {
-    int intVal = UNDEFINED;
     MathOperation mathOperation;
-    bool hasSubExpr = UNDEFINED;
 public:
     ExprToken(int intVal, MathOperation mathOperation, bool hasSubExpr);
     ExprToken(int intVal, MathOperation mathOperation);
@@ -23,6 +21,8 @@ public:
     ExprToken(int intVal);
     ExprToken(MathOperation mathOperation);
     ExprToken(bool hasSubExpr);
+    bool hasSubExpr = UNDEFINED;
+    int intVal = UNDEFINED;
 };
 
 #endif /* ExprToken_hpp */

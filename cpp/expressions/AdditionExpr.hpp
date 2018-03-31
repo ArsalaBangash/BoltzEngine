@@ -14,6 +14,9 @@
 
 class AdditionExpr: public MathExpr
 {
+public:
+    AdditionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+protected:
     void setMax(Level);
     void addZeroBoundTokens(SubExprLocation);
     void noSubExpressions();

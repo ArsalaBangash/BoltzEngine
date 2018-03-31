@@ -14,13 +14,6 @@
 
 class MathExpr
 {
-
-    class ExpressionFactory
-    {
-    public:
-        MathExpr createExpression(MathOperation expressionType, int bound, Level level);
-    };
-
 public:
     bool isBounded = false;
     std::vector<ExprToken> expression;
@@ -38,6 +31,12 @@ public:
      * whether or not the expression is bounded
      */
     std::vector<ExprToken> produceExpression(SubExprLocation subExprLocation);
+    
+    class ExpressionFactory
+    {
+    public:
+        static MathExpr createExpression(MathOperation expressionType, int bound, Level level);
+    };
     
 protected:
     /* Adds operands to the MathExpr */

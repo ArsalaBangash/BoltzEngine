@@ -11,6 +11,7 @@
 
 #include <random>
 
+double random(int min, int max);
 int generateNonZero(int absoluteRange);
 int generatePositiveRandom(int min, int max);
 int generatePositiveRandom(int max);

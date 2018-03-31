@@ -8,16 +8,16 @@
 
 #include "EngineUtils.hpp"
 
-int random(int min, int max)
+double random(int min, int max)
 {
     std::default_random_engine gen ((unsigned int)std::chrono::system_clock::now().time_since_epoch().count());
     std::uniform_real_distribution<double> dist(min, max);
-    return (int) dist(gen);
+    return dist(gen);
 }
 
 int generateNonZero(int absoluteRange)
 {
-    int num = random(-absoluteRange, absoluteRange);
+    int num = (int) random(-absoluteRange, absoluteRange);
     if (num == 0)
         num++;
     return num;
@@ -25,15 +25,15 @@ int generateNonZero(int absoluteRange)
 
 int generatePositiveRandom(int min, int max)
 {
-    return random(min, max);
+    return (int) random(min, max);
 }
 
 int generatePositiveRandom(int max)
 {
-    return random(1, max);
+    return (int) random(1, max);
 }
 
 int generatePosNegRandom(int range)
 {
-    return random(-range, range);
+    return (int) random(-range, range);
 }

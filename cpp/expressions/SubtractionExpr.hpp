@@ -19,6 +19,10 @@ class SubtractionExpr: public MathExpr
     void noSubExpressions();
     void twoSubExpressions();
     void oneSubExpressions(SubExprLocation);
+    
+public:
+    SubtractionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+
 };
 
 #endif /* SubtractionExpr_hpp */

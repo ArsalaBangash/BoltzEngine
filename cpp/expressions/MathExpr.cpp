@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include "MathExpr.hpp"
+#include "AdditionExpr.hpp"
+#include "SubtractionExpr.hpp"
+#include "MultiplicationExpr.hpp"
 
 MathExpr::MathExpr(MathOperation mathOperation)
 {
@@ -15,7 +18,7 @@ MathExpr::MathExpr(MathOperation mathOperation)
 
 std::vector<ExprToken> MathExpr::produceExpression(SubExprLocation subExprLocation)
 {
-    expression.insert(expression.end(), ExprToken::ExprToken(this->mathOperation));
+    expression.insert(expression.end(), ExprToken(this->mathOperation));
     if (isBounded && bound == 0)
         this->addZeroBoundTokens(subExprLocation);
     else
@@ -49,19 +52,12 @@ MathExpr MathExpr::ExpressionFactory::createExpression(MathOperation expressionT
                                                        int bound,
                                                        Level level)
 {
-    MathExpr *mathExpr;
+    MathExpr math(expressionType);
     switch (expressionType)
     {
-        case MathOperation::Addition :
-            //mathExpr = AdditionExpr(expressionType);
-            std::cout << "Addition" << std::endl;
-            break;
-        case MathOperation::Subtraction :
-            std::cout << "Subtraction" << std::endl;
-            break;
-        case MathOperation::Multiplication :
-            std::cout << "Multiplication" << std::endl;
-            break;
+        case MathOperation::Addition : return AdditionExpr(expressionType);
+        case MathOperation::Subtraction : return SubtractionExpr(expressionType);
+        case MathOperation::Multiplication : return MultiplcationExpr(expressionType);
         case MathOperation::Division :
             std::cout << "Division" << std::endl;
             break;
@@ -71,5 +67,5 @@ MathExpr MathExpr::ExpressionFactory::createExpression(MathOperation expressionT
         default:
             break;
     }
-    return *mathExpr;
+    return math;
 }

@@ -21,6 +21,9 @@ class MultiplcationExpr: public MathExpr
     void oneSubExpressions(SubExprLocation);
     std::vector<ExprToken> produceExpression(SubExprLocation);
     
+public:
+    MultiplcationExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+    
 private:
     std::vector<int> multiples;
 };

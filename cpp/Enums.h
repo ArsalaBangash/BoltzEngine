@@ -2,7 +2,7 @@
 #ifndef enums_h
 #define enums_h
 
-#define UNDEFINED -999;
+#define UNDEFINED 0 - 999;
 
 typedef enum
 {
