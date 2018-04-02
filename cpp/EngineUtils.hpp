@@ -12,6 +12,7 @@
 #include <random>
 
 double random(int min, int max);
+unsigned long random_index(unsigned long max);
 int generateNonZero(int absoluteRange);
 int generatePositiveRandom(int min, int max);
 int generatePositiveRandom(int max);

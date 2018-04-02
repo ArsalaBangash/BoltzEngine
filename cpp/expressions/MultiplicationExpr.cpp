@@ -6,10 +6,12 @@
 //  Copyright © 2018 KyoKeun Park. All rights reserved.
 //
 
+#include <iostream>
 #include "MultiplicationExpr.hpp"
 #include "EngineUtils.hpp"
 
-void MultiplcationExpr::setMax(Level level)
+
+void MultiplicationExpr::setMax(Level level)
 {
     switch (level)
     {
@@ -19,7 +21,7 @@ void MultiplcationExpr::setMax(Level level)
     }
 }
 
-void MultiplcationExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
+void MultiplicationExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
 {
     int operand1 = generatePositiveRandom(MAX);
     int operand2 = 0;
@@ -27,23 +29,102 @@ void MultiplcationExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
     switch (subExprLocation)
     {
         case SubExprLocation::NEITHER :
-            expression.insert(expression.end(), ExprToken(operand1));
-            expression.insert(expression.end(), ExprToken(operand2));
+            expression.push_back(ExprToken(operand1));
+            expression.push_back(ExprToken(operand2));
         case SubExprLocation::BOTH :
-            expression.insert(expression.end(), ExprToken(operand1, true));
-            expression.insert(expression.end(), ExprToken(operand2, true));
+            expression.push_back(ExprToken(operand2, true));
+            expression.push_back(ExprToken(operand2, true));
         case SubExprLocation::LEFT :
-            expression.insert(expression.end(), ExprToken(operand1, true));
-            expression.insert(expression.end(), ExprToken(operand2, true));
+            expression.push_back(ExprToken(operand1, true));
+            expression.push_back(ExprToken(operand2));
         case SubExprLocation::RIGHT :
-            expression.insert(expression.end(), ExprToken(operand1));
-            expression.insert(expression.end(), ExprToken(operand2, true));
+            expression.push_back(ExprToken(operand1));
+            expression.push_back(ExprToken(operand2, true));
     }
 }
 
-std::vector<ExprToken> MultiplcationExpr::produceExpression(SubExprLocation subExprLocation)
+std::vector<ExprToken> MultiplicationExpr::produceExpression(SubExprLocation subExprLocation)
 {
     if (this->isBounded)
     {
+        int bound = this->bound;
+        std::vector<int> allNumbers(bound);
+        std::vector<int> filteredNumbers;
+        // Fill allNumbers with the numbers between 1 and bound
+        std::iota(begin(allNumbers), end(allNumbers), 1);
+        // Only copy the numbers to filteredNumbers if the number is divisible by bound
+        std::copy_if(begin(allNumbers), end(allNumbers), begin(filteredNumbers),
+                     [bound](int i) {return bound % i;});
+        
+        // Populate multiple with all possible pairs of numbers that makes number bound
+        for (int i = 0; i > filteredNumbers.size(); i++)
+        {
+            this->multiples[i][0] = filteredNumbers[i];
+            this->multiples[i][1] = bound / filteredNumbers[i];
+        }
+    }
+    return MathExpr::produceExpression(subExprLocation);
+}
+
+void MultiplicationExpr::noSubExpressions()
+{
+    if (this->isBounded)
+    {
+        std::vector<int> boundMultiples = multiples[random_index(multiples.size())];
+        expression.push_back(ExprToken(boundMultiples[0]));
+        expression.push_back(ExprToken(boundMultiples[1]));
+    }
+    else
+    {
+        expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1));
+        expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1));
+    }
+}
+
+void MultiplicationExpr::twoSubExpressions()
+{
+    if (this->isBounded)
+    {
+        std::vector<int> boundMultiples = multiples[random_index(multiples.size())];
+        expression.push_back(ExprToken(boundMultiples[0], true));
+        expression.push_back(ExprToken(boundMultiples[1], true));
+    }
+    else
+    {
+        expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1, true));
+        expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1, true));
+    }
+}
+
+void MultiplicationExpr::oneSubExpressions(SubExprLocation subExprLocation)
+{
+    switch(subExprLocation)
+    {
+        case SubExprLocation::LEFT :
+            if (this->isBounded)
+            {
+                std::vector<int> boundMultiples = multiples[random_index(multiples.size())];
+                expression.push_back(ExprToken(boundMultiples[0], true));
+                expression.push_back(ExprToken(boundMultiples[1]));
+            }
+            else
+            {
+                expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1, true));
+                expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1));
+            }
+        case SubExprLocation::RIGHT :
+            if (this->isBounded)
+            {
+                std::vector<int> boundMultiples = multiples[random_index(multiples.size())];
+                expression.push_back(ExprToken(boundMultiples[0]));
+                expression.push_back(ExprToken(boundMultiples[1], true));
+            }
+            else
+            {
+                expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1));
+                expression.push_back(ExprToken(generatePositiveRandom(MAX) + 1, true));
+            }
+        default:
+            std::cout << "Should not happen\n";
     }
 }

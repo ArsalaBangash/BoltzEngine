@@ -48,7 +48,7 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
 {
     int operationsLeft = static_cast<int>(operations.size());
     vector<ExprToken> expression;
-    MathOperation currentOp = operations.at(random(0, (int) operations.size()));
+    MathOperation currentOp = operations[random_index(operations.size())];
     
     // Determines whether the current operation will have numbers or sub-expressions on either side
     SubExprLocation subExprLocation = getEmptyTokenLocations(operationsLeft);
@@ -67,7 +67,7 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
     // While sub-expressions still exist, we'll continue to add to the expression
     while (exprWithSub != NULL)
     {
-        currentOp = operations.at((int) random(0, static_cast<int>(operations.size())));
+        currentOp = operations[random_index(operations.size())];
         subExprLocation = getEmptyTokenLocations(operationsLeft);
         expression = exprWithSub->leftSide;
         

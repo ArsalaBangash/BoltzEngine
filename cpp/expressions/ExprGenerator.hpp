@@ -17,10 +17,13 @@ class ExprGenerator
 		std::vector<ExprToken> rightSide;
     };
 
-	int reduceOperationsBy(SubExprLocation);
-	SubExprLocation getEmptyTokenLocations(int);
-	std::vector<ExprToken> generateExpression(std::vector<MathOperation>, Level);
-	struct ExprWithSub *checkSubExprTokens(std::vector<ExprToken>);
+	static int reduceOperationsBy(SubExprLocation);
+	static SubExprLocation getEmptyTokenLocations(int);
+	static struct ExprWithSub *checkSubExprTokens(std::vector<ExprToken>);
+    
+public:
+    static std::vector<ExprToken> generateExpression(std::vector<MathOperation>, Level);
+
 };
 
 #endif

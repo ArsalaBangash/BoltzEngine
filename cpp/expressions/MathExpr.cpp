@@ -18,25 +18,17 @@ MathExpr::MathExpr(MathOperation mathOperation)
 
 std::vector<ExprToken> MathExpr::produceExpression(SubExprLocation subExprLocation)
 {
-    expression.insert(expression.end(), ExprToken(this->mathOperation));
+    expression.push_back(ExprToken(this->mathOperation));
     if (isBounded && bound == 0)
         this->addZeroBoundTokens(subExprLocation);
     else
     {
         switch(subExprLocation)
         {
-            case SubExprLocation::NEITHER :
-                this->noSubExpressions();
-                break;
-            case SubExprLocation::LEFT :
-                this->oneSubExpression(SubExprLocation::LEFT);
-                break;
-            case SubExprLocation::RIGHT :
-                this->oneSubExpression(SubExprLocation::RIGHT);
-                break;
-            case SubExprLocation::BOTH :
-                this->twoSubExpressions();
-                break;
+            case SubExprLocation::NEITHER : this->noSubExpressions();
+            case SubExprLocation::LEFT : this->oneSubExpression(SubExprLocation::LEFT);
+            case SubExprLocation::RIGHT : this->oneSubExpression(SubExprLocation::RIGHT);
+            case SubExprLocation::BOTH : this->twoSubExpressions();
         }
     }
     return expression;
@@ -57,13 +49,9 @@ MathExpr MathExpr::ExpressionFactory::createExpression(MathOperation expressionT
     {
         case MathOperation::Addition : return AdditionExpr(expressionType);
         case MathOperation::Subtraction : return SubtractionExpr(expressionType);
-        case MathOperation::Multiplication : return MultiplcationExpr(expressionType);
-        case MathOperation::Division :
-            std::cout << "Division" << std::endl;
-            break;
-        case MathOperation::Modulus :
-            std::cout << "Modulus" << std::endl;
-            break;
+        case MathOperation::Multiplication : return MultiplicationExpr(expressionType);
+        case MathOperation::Division : std::cout << "Division" << std::endl;
+        case MathOperation::Modulus : std::cout << "Modulus" << std::endl;
         default:
             break;
     }
