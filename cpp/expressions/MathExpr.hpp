@@ -23,14 +23,14 @@ public:
     MathOperation mathOperation;
     
     /* Constructor for the MathExpr */
-    MathExpr(MathOperation mathOperation);
+    virtual MathExpr(MathOperation mathOperation);
     
     /*
      * Every concrete implmentation of a MathExpr generates its expression in polish notation
      * by first adding it's MathOperation and then depending on the location of its subexpression and
      * whether or not the expression is bounded
      */
-    std::vector<ExprToken> produceExpression(SubExprLocation subExprLocation);
+    virtual std::vector<ExprToken> produceExpression(SubExprLocation subExprLocation);
     
     class ExpressionFactory
     {
