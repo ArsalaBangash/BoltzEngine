@@ -35,7 +35,7 @@ public:
     class ExpressionFactory
     {
     public:
-        static MathExpr createExpression(MathOperation expressionType, int bound, Level level);
+        static MathExpr *createExpression(MathOperation expressionType, int bound, Level level);
     };
     
 protected:
