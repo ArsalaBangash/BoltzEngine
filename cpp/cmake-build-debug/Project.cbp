@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\expressions\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine-app">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/engine-app" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine-app"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="engine-app/fast">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/engine-app" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine-app/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExprGenerator">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/ExprGenerator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 ExprGenerator"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ExprGenerator/fast">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/ExprGenerator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 ExprGenerator/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SubtractionExpr">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/SubtractionExpr" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 SubtractionExpr"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SubtractionExpr/fast">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/SubtractionExpr" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 SubtractionExpr/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AdditionExpr">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/AdditionExpr" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 AdditionExpr"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AdditionExpr/fast">
+				<Option output="/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/AdditionExpr" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=""/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 AdditionExpr/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/EngineApp.cpp">
+			<Option target="engine-app"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/EngineApp.h">
+			<Option target="engine-app"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/expressions/AdditionExpr.cpp">
+			<Option target="AdditionExpr"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/expressions/AdditionExpr.hpp">
+			<Option target="AdditionExpr"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/expressions/ExprGenerator.cpp">
+			<Option target="ExprGenerator"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/expressions/ExprGenerator.hpp">
+			<Option target="ExprGenerator"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/expressions/SubtractionExpr.cpp">
+			<Option target="SubtractionExpr"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/expressions/SubtractionExpr.hpp">
+			<Option target="SubtractionExpr"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/expressions/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\expressions\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
