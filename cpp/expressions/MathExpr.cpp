@@ -40,16 +40,16 @@ void MathExpr::setBound(int bound)
     this->isBounded = true;
 }
 
-MathExpr MathExpr::ExpressionFactory::createExpression(MathOperation expressionType,
+MathExpr *MathExpr::ExpressionFactory::createExpression(MathOperation expressionType,
                                                        int bound,
                                                        Level level)
 {
-    MathExpr math(expressionType);
+    MathExpr *math = new MathExpr(expressionType);
     switch (expressionType)
     {
-        case MathOperation::Addition : return AdditionExpr(expressionType);
-        case MathOperation::Subtraction : return SubtractionExpr(expressionType);
-        case MathOperation::Multiplication : return MultiplicationExpr(expressionType);
+        case MathOperation::Addition : return new AdditionExpr(expressionType);
+        case MathOperation::Subtraction : return new SubtractionExpr(expressionType);
+        case MathOperation::Multiplication : return new MultiplicationExpr(expressionType);
         case MathOperation::Division : std::cout << "Division" << std::endl;
         case MathOperation::Modulus : std::cout << "Modulus" << std::endl;
         default:

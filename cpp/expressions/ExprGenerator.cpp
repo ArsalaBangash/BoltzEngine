@@ -58,8 +58,8 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
     vector<MathOperation>::iterator position = find(operations.begin(), operations.end(), currentOp);
     if (position != operations.end()) operations.erase(position);
     
-    MathExpr expr = MathExpr::ExpressionFactory::createExpression(currentOp, NULL, level);
-    vector<ExprToken> newExpressions = expr.produceExpression(subExprLocation);
+    MathExpr *expr = MathExpr::ExpressionFactory::createExpression(currentOp, NULL, level);
+    vector<ExprToken> newExpressions = expr->produceExpression(subExprLocation);
     expression.insert(end(expression), begin(newExpressions), end(newExpressions));
     
     ExprWithSub *exprWithSub = checkSubExprTokens(expression);
@@ -76,7 +76,7 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
             expr = MathExpr::ExpressionFactory::createExpression(currentOp, exprWithSub->bound, level);
         else
             expr = MathExpr::ExpressionFactory::createExpression(currentOp, NULL, level);
-        newExpressions = expr.produceExpression(subExprLocation);
+        newExpressions = expr->produceExpression(subExprLocation);
         expression.insert(end(expression), begin(newExpressions), end(newExpressions));
         
         // Add the right side of the previously global expression and

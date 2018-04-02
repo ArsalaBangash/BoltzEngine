@@ -23,7 +23,7 @@ public:
     MathOperation mathOperation;
     
     /* Constructor for the MathExpr */
-    virtual MathExpr(MathOperation mathOperation);
+    MathExpr(MathOperation mathOperation);
     
     /*
      * Every concrete implmentation of a MathExpr generates its expression in polish notation
