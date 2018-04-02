@@ -40,20 +40,20 @@ public:
     
 protected:
     /* Adds operands to the MathExpr */
-    virtual void noSubExpressions();
+    virtual void noSubExpressions() = 0;
     
     /* Adds subexpressions to the MathExpr */
-    virtual void twoSubExpressions();
+    virtual void twoSubExpressions() = 0;
     
     /* Depending on whether a sub-expression will be on the left or right, this function will
      * add an operand and a subexpression accordingly */
-    virtual void oneSubExpression(SubExprLocation subExprLocation);
+    virtual void oneSubExpression(SubExprLocation subExprLocation) = 0;
     
     /* When the MathEExpr is bounded by a value of 0, operands are added accordingly */
-    virtual void addZeroBoundTokens(SubExprLocation subExprLocation);
+    virtual void addZeroBoundTokens(SubExprLocation subExprLocation) = 0;
     
     /* Sets the maximum value for an operand based on the [difficulty] of the expression */
-    virtual void setMax(Level level);
+    virtual void setMax(Level level) = 0;
     
 private:
     /* Lets the implementation of MathExpr know that it is a bounded sub-expression */

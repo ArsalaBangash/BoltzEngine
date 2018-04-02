@@ -24,7 +24,7 @@ void ModulusExpr::setMax(Level level)
 void ModulusExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
 {
     int constant = generatePositiveRandom(MIN, MAX);
-    int divisor = generatePositiveRanomd(MIN, MAX);
+    int divisor = generatePositiveRandom(MIN, MAX);
     switch (subExprLocation)
     {
         case SubExprLocation::NEITHER :

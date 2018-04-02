@@ -44,7 +44,6 @@ MathExpr *MathExpr::ExpressionFactory::createExpression(MathOperation expression
                                                        int bound,
                                                        Level level)
 {
-    MathExpr *math = new MathExpr(expressionType);
     switch (expressionType)
     {
         case MathOperation::Addition : return new AdditionExpr(expressionType);
@@ -55,5 +54,6 @@ MathExpr *MathExpr::ExpressionFactory::createExpression(MathOperation expression
         default:
             break;
     }
-    return math;
+    // Temporary
+    return new AdditionExpr(expressionType);
 }

@@ -18,7 +18,7 @@ class MultiplicationExpr: public MathExpr
     void addZeroBoundTokens(SubExprLocation);
     void noSubExpressions();
     void twoSubExpressions();
-    void oneSubExpressions(SubExprLocation);
+    void oneSubExpression(SubExprLocation);
     std::vector<ExprToken> produceExpression(SubExprLocation);
     
 public:

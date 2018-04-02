@@ -18,7 +18,7 @@ class SubtractionExpr: public MathExpr
     void addZeroBoundTokens(SubExprLocation);
     void noSubExpressions();
     void twoSubExpressions();
-    void oneSubExpressions(SubExprLocation);
+    void oneSubExpression(SubExprLocation);
     
 public:
     SubtractionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}

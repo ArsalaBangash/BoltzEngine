@@ -14,7 +14,7 @@ class ModulusExpr: public MathExpr
     void addZeroBoundTokens(SubExprLocation);
     void noSubExpressions();
     void twoSubExpressions();
-    void oneSubExpressions(SubExprLocation);
+    void oneSubExpression(SubExprLocation);
 
 public:
     ModulusExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}

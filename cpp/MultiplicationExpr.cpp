@@ -96,7 +96,7 @@ void MultiplicationExpr::twoSubExpressions()
     }
 }
 
-void MultiplicationExpr::oneSubExpressions(SubExprLocation subExprLocation)
+void MultiplicationExpr::oneSubExpression(SubExprLocation subExprLocation)
 {
     switch(subExprLocation)
     {

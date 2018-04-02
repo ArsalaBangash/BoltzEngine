@@ -75,7 +75,7 @@ void SubtractionExpr::twoSubExpressions()
     }
 }
 
-void SubtractionExpr::oneSubExpressions(SubExprLocation subExprLocation)
+void SubtractionExpr::oneSubExpression(SubExprLocation subExprLocation)
 {
     int boundedRandom, boundedRandomComplement;
     switch (subExprLocation)
