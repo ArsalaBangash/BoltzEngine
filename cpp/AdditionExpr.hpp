@@ -12,15 +12,19 @@
 #include "ExprToken.hpp"
 #include "MathExpr.hpp"
 
-class AdditionExpr: public MathExpr
-{
+class AdditionExpr : public MathExpr {
 public:
     AdditionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+
 protected:
     void setMax(Level);
+
     void addZeroBoundTokens(SubExprLocation);
+
     void noSubExpressions();
+
     void twoSubExpressions();
+
     void oneSubExpression(SubExprLocation);
 };
 

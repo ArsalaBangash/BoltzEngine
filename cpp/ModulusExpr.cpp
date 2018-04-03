@@ -5,10 +5,8 @@
 #include "ModulusExpr.hpp"
 #include "EngineUtils.hpp"
 
-void ModulusExpr::setMax(Level level)
-{
-    switch (level)
-    {
+void ModulusExpr::setMax(Level level) {
+    switch (level) {
         case Level::Basic :
             MIN = 1;
             MAX = 3;
@@ -21,12 +19,10 @@ void ModulusExpr::setMax(Level level)
     }
 }
 
-void ModulusExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
-{
+void ModulusExpr::addZeroBoundTokens(SubExprLocation subExprLocation) {
     int constant = generatePositiveRandom(MIN, MAX);
     int divisor = generatePositiveRandom(MIN, MAX);
-    switch (subExprLocation)
-    {
+    switch (subExprLocation) {
         case SubExprLocation::NEITHER :
             expression.push_back(ExprToken(constant * divisor));
             expression.push_back(ExprToken(divisor));
@@ -42,17 +38,13 @@ void ModulusExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
     }
 }
 
-void ModulusExpr::noSubExpressions()
-{
-    if (this->isBounded)
-    {
+void ModulusExpr::noSubExpressions() {
+    if (this->isBounded) {
         int divisor = generatePositiveRandom(bound + 1, MAX);
         int dividend = (divisor * generatePositiveRandom(MAX)) + bound;
         expression.push_back(ExprToken(dividend));
         expression.push_back(ExprToken(divisor));
-    }
-    else
-    {
+    } else {
         int divisor = generatePositiveRandom(MIN, MAX);
         int dividend = generatePositiveRandom(MIN, MAX) + divisor;
         expression.push_back(ExprToken(dividend));
@@ -60,16 +52,12 @@ void ModulusExpr::noSubExpressions()
     }
 }
 
-void ModulusExpr::twoSubExpressions()
-{
+void ModulusExpr::twoSubExpressions() {
     int divisor, dividend;
-    if (this->isBounded)
-    {
+    if (this->isBounded) {
         divisor = generatePositiveRandom(bound + 1, MAX);
         dividend = (divisor * generatePositiveRandom(MAX)) + bound;
-    }
-    else
-    {
+    } else {
         divisor = generatePositiveRandom(MIN, MAX);
         dividend = generatePositiveRandom(MIN, MAX) + divisor;
     }
@@ -77,21 +65,16 @@ void ModulusExpr::twoSubExpressions()
     expression.push_back(ExprToken(divisor, true));
 }
 
-void ModulusExpr::oneSubExpression(SubExprLocation subExprLocation)
-{
+void ModulusExpr::oneSubExpression(SubExprLocation subExprLocation) {
     int divisor, dividend;
-    if (this->isBounded)
-    {
+    if (this->isBounded) {
         divisor = generatePositiveRandom(bound, MAX);
         dividend = (divisor * generatePositiveRandom(MAX)) + bound;
-    }
-    else
-    {
+    } else {
         divisor = generatePositiveRandom(MIN, MAX);
         dividend = generatePositiveRandom(MIN, MAX) + divisor;
     }
-    switch (subExprLocation)
-    {
+    switch (subExprLocation) {
         case SubExprLocation::LEFT :
             expression.push_back(ExprToken(dividend, true));
             expression.push_back(ExprToken(divisor));

@@ -12,14 +12,17 @@
 #include "ExprToken.hpp"
 #include "MathExpr.hpp"
 
-class SubtractionExpr: public MathExpr
-{
+class SubtractionExpr : public MathExpr {
     void setMax(Level);
+
     void addZeroBoundTokens(SubExprLocation);
+
     void noSubExpressions();
+
     void twoSubExpressions();
+
     void oneSubExpression(SubExprLocation);
-    
+
 public:
     SubtractionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
 

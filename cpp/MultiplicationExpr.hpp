@@ -12,20 +12,24 @@
 #include "ExprToken.hpp"
 #include "MathExpr.hpp"
 
-class MultiplicationExpr: public MathExpr
-{
+class MultiplicationExpr : public MathExpr {
     void setMax(Level);
+
     void addZeroBoundTokens(SubExprLocation);
+
     void noSubExpressions();
+
     void twoSubExpressions();
+
     void oneSubExpression(SubExprLocation);
+
     std::vector<ExprToken> produceExpression(SubExprLocation);
-    
+
 public:
     MultiplicationExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
-    
+
 private:
-    std::vector< std::vector<int> > multiples;
+    std::vector<std::vector<int> > multiples;
 };
 
 #endif /* MultiplicationExpr_hpp */

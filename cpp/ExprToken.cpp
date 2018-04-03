@@ -8,31 +8,30 @@
 
 #include "ExprToken.hpp"
 
-ExprToken::ExprToken(int intVal, MathOperation mathOperation, bool hasSubExpr)
-{
+ExprToken::ExprToken(int intVal, MathOperation mathOperation, bool hasSubExpr) {
     this->intVal = intVal;
     this->mathOperation = mathOperation;
     this->hasSubExpr = hasSubExpr;
 }
-ExprToken::ExprToken(MathOperation mathOperation)
-{
+
+ExprToken::ExprToken(MathOperation mathOperation) {
     this->mathOperation = mathOperation;
 }
-ExprToken::ExprToken(int intVal)
-{
+
+ExprToken::ExprToken(int intVal) {
     this->intVal = intVal;
 }
-ExprToken::ExprToken(int intVal, MathOperation mathOperation)
-{
+
+ExprToken::ExprToken(int intVal, MathOperation mathOperation) {
     this->intVal = intVal;
     this->mathOperation = mathOperation;
 }
-ExprToken::ExprToken(int intVal, bool hasSubExpr)
-{
+
+ExprToken::ExprToken(int intVal, bool hasSubExpr) {
     this->intVal = intVal;
     this->hasSubExpr = hasSubExpr;
 }
-ExprToken::ExprToken(bool hasSubExpr)
-{
+
+ExprToken::ExprToken(bool hasSubExpr) {
     this->hasSubExpr = hasSubExpr;
 }

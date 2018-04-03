@@ -8,12 +8,15 @@
 #include "MathExpr.hpp"
 #include "ExprToken.hpp"
 
-class ModulusExpr: public MathExpr
-{
+class ModulusExpr : public MathExpr {
     void setMax(Level);
+
     void addZeroBoundTokens(SubExprLocation);
+
     void noSubExpressions();
+
     void twoSubExpressions();
+
     void oneSubExpression(SubExprLocation);
 
 public:

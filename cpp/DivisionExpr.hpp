@@ -12,17 +12,20 @@
 #include "MathExpr.hpp"
 #include "ExprToken.hpp"
 
-class DivisionExpr: public MathExpr
-{
+class DivisionExpr : public MathExpr {
     void setMax(Level);
+
     void addZeroBoundTokens(SubExprLocation);
+
     void noSubExpressions();
+
     void twoSubExpressions();
+
     void oneSubExpression(SubExprLocation);
 
 public:
     DivisionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
-    
+
 private:
     int generateDivisor(int);
 };

@@ -4,15 +4,13 @@
 
 #define UNDEFINED 0 - 999;
 
-typedef enum
-{
+typedef enum {
     Basic,
     Normal,
     Advanced
 } Level;
 
-typedef enum
-{
+typedef enum {
     Addition,
     Subtraction,
     Multiplication,
@@ -21,8 +19,7 @@ typedef enum
     Division
 } MathOperation;
 
-typedef enum
-{
+typedef enum {
     NEITHER,
     BOTH,
     LEFT,
