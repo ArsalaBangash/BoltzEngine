@@ -81,7 +81,8 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
 
         // Add the right side of the previously global expression and
         // check again for any Sub-Expression Tokens
-        expression.insert(end(expression), begin(exprWithSub->rightSide), end(exprWithSub->rightSide));
+//        expression.insert(end(expression), begin(exprWithSub->rightSide), end(exprWithSub->rightSide));
+        expression.insert(expression.end(), exprWithSub->rightSide.begin(), exprWithSub->rightSide.end());
         position = find(operations.begin(), operations.end(), currentOp);
         if (position != operations.end()) operations.erase(position);
         operationsLeft -= reduceOperationsBy(subExprLocation);
@@ -103,10 +104,13 @@ ExprGenerator::ExprWithSub *ExprGenerator::checkSubExprTokens(std::vector<ExprTo
             int bound = token->intVal;
             expressionList.erase(expressionList.begin() + i);
             vector<ExprToken> preEmptyTokens;
-            preEmptyTokens.insert(preEmptyTokens.begin(), expressionList.begin(), expressionList.begin() + i - 1);
+            for (int c = 0; c < i; c++) {
+                preEmptyTokens.push_back(expressionList[c]);
+            }
             vector<ExprToken> postEmptyTokens;
-            postEmptyTokens.insert(postEmptyTokens.begin(), expressionList.begin() + i, expressionList.end());
-
+            for (int c = i; c < expressionList.size(); c++) {
+                postEmptyTokens.push_back(expressionList[c]);
+            }
             struct ExprWithSub *expr = new struct ExprWithSub;
             expr->bound = bound;
             expr->leftSide = preEmptyTokens;
