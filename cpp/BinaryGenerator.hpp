@@ -11,14 +11,14 @@
 
 class BinaryChallenge
 {
-    std::string decimal;
-    std::string binary;
-    bool binaryToDec = false;
-
     BinaryChallenge(std::string, std::string, bool);
     static std::pair<std::string, std::string> getBiDecPair(Level);
 
 public:
+    std::string decimal;
+    std::string binary;
+    bool binaryToDec = false;
+
     static BinaryChallenge *generateBinaryQuestion(Level);
 };
 

@@ -2,6 +2,8 @@
 // Created by KyoKeun Park on 2018-04-02.
 //
 
+#include <math.h>
+#include <iostream>
 #include "BinaryGenerator.hpp"
 #include "EngineUtils.hpp"
 
@@ -16,17 +18,24 @@ BinaryChallenge *BinaryChallenge::generateBinaryQuestion(Level level)
 
 std::pair<std::string, std::string> BinaryChallenge::getBiDecPair(Level level)
 {
-    int decimal;
+    int decimal = 0;
+    int maxNum = 0;
     switch (level)
     {
         case Level::Basic :
-            decimal = generatePositiveRandom(64) + 1;
+            maxNum = 64;
+            break;
         case Level::Advanced :
-            decimal = generatePositiveRandom(256) + 1;
+            maxNum = 256;
+            break;
         default:
-            decimal = generatePositiveRandom(128) + 1;
+            maxNum = 128;
+            break;
     }
-    std::string binary = std::string("0").append(std::to_string(decimal));
+    decimal = generatePositiveRandom(maxNum) + 1;
+    std::string binary = std::string("0");
+    for (int i = (int) log2(maxNum); i >= 0; i--)
+        binary.append(std::to_string((decimal >> i) & 1));
     return std::pair<std::string, std::string>(std::to_string(decimal), binary);
 }
 

@@ -3,6 +3,7 @@
 #include "AdditionExpr.hpp"
 #include "SubtractionExpr.hpp"
 #include "EngineUtils.hpp"
+#include "BinaryGenerator.hpp"
 
 using namespace std;
 
@@ -22,6 +23,10 @@ int main() {
     for (int i = 0; i < exprTokens.size(); i++) {
         cout << ExprToken::exprString(exprTokens[i]) << std::endl;
     }
+
+    BinaryChallenge *binary = BinaryChallenge::generateBinaryQuestion(Normal);
+
+    cout << binary->binary << " : " << binary->decimal << endl;
 
     cout << "exprToken generated successfully\n";
 
