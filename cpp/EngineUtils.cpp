@@ -16,7 +16,7 @@ double random(int min, int max) {
 
 unsigned long random_index(unsigned long max) {
     std::default_random_engine gen((unsigned int) std::chrono::system_clock::now().time_since_epoch().count());
-    std::uniform_real_distribution<unsigned long> dist(0, max);
+    std::uniform_real_distribution<unsigned long> dist(0, max - 1);
     return dist(gen);
 }
 

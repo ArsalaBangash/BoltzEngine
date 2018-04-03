@@ -26,15 +26,19 @@ void ModulusExpr::addZeroBoundTokens(SubExprLocation subExprLocation) {
         case SubExprLocation::NEITHER :
             expression.push_back(ExprToken(constant * divisor));
             expression.push_back(ExprToken(divisor));
+            break;
         case SubExprLocation::BOTH :
             expression.push_back(ExprToken(constant * divisor, true));
             expression.push_back(ExprToken(divisor, true));
+            break;
         case SubExprLocation::LEFT :
             expression.push_back(ExprToken(constant * divisor, true));
             expression.push_back(ExprToken(divisor));
+            break;
         case SubExprLocation::RIGHT :
             expression.push_back(ExprToken(constant * divisor));
             expression.push_back(ExprToken(divisor, true));
+            break;
     }
 }
 
@@ -78,8 +82,10 @@ void ModulusExpr::oneSubExpression(SubExprLocation subExprLocation) {
         case SubExprLocation::LEFT :
             expression.push_back(ExprToken(dividend, true));
             expression.push_back(ExprToken(divisor));
+            break;
         case SubExprLocation::RIGHT :
             expression.push_back(ExprToken(dividend));
             expression.push_back(ExprToken(divisor, true));
+            break;
     }
 }

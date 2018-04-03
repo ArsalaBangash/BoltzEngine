@@ -2,6 +2,7 @@
 #include "ExprGenerator.hpp"
 #include "AdditionExpr.hpp"
 #include "SubtractionExpr.hpp"
+#include "EngineUtils.hpp"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ int main() {
     operations.insert(operations.end(), Addition);
     operations.insert(operations.end(), Subtraction);
     operations.insert(operations.end(), Multiplication);
+    operations.emplace_back(Division);
 
     std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Basic);
 
@@ -22,6 +24,8 @@ int main() {
     }
 
     cout << "exprToken generated successfully\n";
+
+    //cout << std::to_string(random(0, 1)) << endl;
 
     return 0;
 }

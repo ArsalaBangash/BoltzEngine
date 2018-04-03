@@ -32,18 +32,28 @@ public:
     int intVal = UNDEFINED;
 
     static std::string exprString(ExprToken exprToken) {
-        if (exprToken.mathOperation) {
+        if (exprToken.intVal == -999) {
             std::string mathOpString;
             switch (exprToken.mathOperation) {
                 case Addition:
                     mathOpString = "Addition";
                     break;
-                default:
-                    mathOpString = "Addition";
+                case Subtraction:
+                    mathOpString = "Subtraction";
                     break;
+                case Multiplication:
+                    mathOpString = "Multiplication";
+                    break;
+                case Division:
+                    return "Division";
+                case Modulus:
+                    return "Modulus";
+                default:
+                    return std::to_string(exprToken.intVal);
             }
             return mathOpString;
-        } else return std::to_string(exprToken.intVal);
+        }
+        return std::to_string(exprToken.intVal);
     }
 
 };

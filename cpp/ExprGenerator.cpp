@@ -49,9 +49,11 @@ SubExprLocation ExprGenerator::getEmptyTokenLocations(int operationsLeft) {
  */
 std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperation> operations,
                                                          Level level) {
+    std::vector<ExprToken> newExpressions;
     int operationsLeft = static_cast<int>(operations.size());
     vector<ExprToken> expression;
-    MathOperation currentOp = operations[random_index(operations.size())];
+    auto index = random_index(operations.size());
+    MathOperation currentOp = operations[index];
 
     // Determines whether the current operation will have numbers or sub-expressions on either side
     SubExprLocation subExprLocation = getEmptyTokenLocations(operationsLeft);
@@ -62,15 +64,13 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
     if (position != operations.end()) operations.erase(position);
 
     MathExpr *expr = MathExpr::ExpressionFactory::createExpression(currentOp, -999, level);
-    vector<ExprToken> newExpressions = expr->produceExpression(subExprLocation);
+    newExpressions = expr->produceExpression(subExprLocation);
     expression.insert(end(expression), begin(newExpressions), end(newExpressions));
 
     ExprWithSub *exprWithSub = checkSubExprTokens(expression);
 
     // While sub-expressions still exist, we'll continue to add to the expression
-    std::cout << "size: " << std::to_string(operations.size()) << std::endl;
-    while (exprWithSub != NULL) {
-        std::cout << std::to_string(random_index(operations.size())) << std::endl;
+    while (exprWithSub != nullptr || operationsLeft == 0) {
         currentOp = operations[random_index(operations.size())];
         subExprLocation = getEmptyTokenLocations(operationsLeft);
         expression = exprWithSub->leftSide;
@@ -123,5 +123,5 @@ ExprGenerator::ExprWithSub *ExprGenerator::checkSubExprTokens(std::vector<ExprTo
             return expr;
         }
     }
-    return NULL;
+    return nullptr;
 }

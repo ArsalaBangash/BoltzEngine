@@ -28,15 +28,19 @@ void SubtractionExpr::addZeroBoundTokens(SubExprLocation subExprLocation) {
         case SubExprLocation::NEITHER :
             expression.insert(expression.end(), ExprToken(0));
             expression.insert(expression.end(), ExprToken(0));
+            break;
         case SubExprLocation::BOTH :
             expression.insert(expression.end(), ExprToken(0, true));
             expression.insert(expression.end(), ExprToken(0, true));
+            break;
         case SubExprLocation::LEFT :
             expression.insert(expression.end(), ExprToken(0, true));
             expression.insert(expression.end(), ExprToken(0));
+            break;
         case SubExprLocation::RIGHT :
             expression.insert(expression.end(), ExprToken(0));
             expression.insert(expression.end(), ExprToken(0, true));
+            break;
     }
 }
 
@@ -76,6 +80,7 @@ void SubtractionExpr::oneSubExpression(SubExprLocation subExprLocation) {
                 expression.insert(expression.end(), ExprToken(true));
                 expression.insert(expression.end(), ExprToken(generatePositiveRandom(MIN, MAX)));
             }
+            break;
         case SubExprLocation::RIGHT :
             if (this->isBounded) {
                 boundedRandom = generatePositiveRandom(MIN, bound);
@@ -86,6 +91,7 @@ void SubtractionExpr::oneSubExpression(SubExprLocation subExprLocation) {
                 expression.insert(expression.end(), ExprToken(generatePositiveRandom(MIN, MAX)));
                 expression.insert(expression.end(), ExprToken(true));
             }
+            break;
         default:
             break;
     }

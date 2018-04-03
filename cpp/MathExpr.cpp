@@ -71,10 +71,9 @@ MathExpr *MathExpr::ExpressionFactory::createExpression(MathOperation expression
     }
     if (expr != nullptr) {
         if (bound != -999) {
-            expr->bound = bound;
+            expr->setBound(bound);
         }
         expr->setMax(level);
     }
-    // Temporary
     return expr;
 }

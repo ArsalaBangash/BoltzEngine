@@ -22,10 +22,10 @@ ExprToken::ExprToken(int intVal) {
     this->intVal = intVal;
 }
 
-ExprToken::ExprToken(int intVal, MathOperation mathOperation) {
-    this->intVal = intVal;
-    this->mathOperation = mathOperation;
-}
+//ExprToken::ExprToken(int intVal, MathOperation mathOperation) {
+//    this->intVal = intVal;
+//    this->mathOperation = mathOperation;
+//}
 
 ExprToken::ExprToken(int intVal, bool hasSubExpr) {
     this->intVal = intVal;

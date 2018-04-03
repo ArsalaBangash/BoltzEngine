@@ -6,6 +6,7 @@
 //  Copyright © 2018 KyoKeun Park. All rights reserved.
 //
 
+#include <iostream>
 #include "AdditionExpr.hpp"
 #include "EngineUtils.hpp"
 
@@ -97,6 +98,7 @@ void AdditionExpr::oneSubExpression(SubExprLocation subExprLocation) {
             }
             break;
         default: // This is to mute the warning
+            std::cout << "ADDITION: should not happen\n";
             break;
     }
 }
