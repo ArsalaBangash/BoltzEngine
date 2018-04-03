@@ -3,3 +3,4 @@
 .vscode
 .idea
 cpp/cmake-build-debug/
+./*/.DS_Store

@@ -4,8 +4,11 @@
 #include "SubtractionExpr.hpp"
 #include "EngineUtils.hpp"
 #include "BinaryGenerator.hpp"
+#include "InfixConverter.h"
 
 using namespace std;
+
+#include <ctime>
 
 int main() {
 //    auto add1 = MathExpr::ExpressionFactory::createExpression(Addition, NULL, Basic);
@@ -18,11 +21,19 @@ int main() {
     operations.insert(operations.end(), Multiplication);
     operations.emplace_back(Division);
 
-    std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Basic);
+    InfixConverter *infixConverter = new InfixConverter;
 
-    for (int i = 0; i < exprTokens.size(); i++) {
-        cout << ExprToken::exprString(exprTokens[i]) << std::endl;
+    time_t start_s = clock();
+    // the code you wish to time goes here
+    int i = 100;
+    while (i > 0) {
+        std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
+        cout << infixConverter->exprToInfix(exprTokens) << endl;
+        i--;
     }
+    time_t stop_s = clock();
+    cout << "time: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 << endl;
+
 
     BinaryChallenge *binary = BinaryChallenge::generateBinaryQuestion(Normal);
 

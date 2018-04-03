@@ -7,14 +7,25 @@
 
 
 #include <string>
+#include <stack>
+#include <map>
 #include "ExprToken.hpp"
+#include "MathExpr.hpp"
+#include <boost/assign/list_of.hpp>
+
+using boost::assign::map_list_of;
 
 class InfixConverter {
 
+    std::map<MathOperation, std::string> opMap;
+
+
+public:
+    InfixConverter();
+
+    void binaryOpToInfix(MathOperation, std::stack<std::string> *);
+
     std::string exprToInfix(std::vector<ExprToken>);
-
-    std::string factorizationToInfix
-
 
 };
 

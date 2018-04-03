@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++   -std=c++1y -Wall -std=c++1y -Wall -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/ExprGenerator.dir/ExprGenerator.cpp.o  -o ExprGenerator 
