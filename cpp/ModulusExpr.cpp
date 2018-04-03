@@ -10,12 +10,15 @@ void ModulusExpr::setMax(Level level) {
         case Level::Basic :
             MIN = 1;
             MAX = 3;
+            break;
         case Level::Normal :
             MIN = 2;
             MAX = 6;
+            break;
         case Level::Advanced :
             MIN = 2;
             MAX = 10;
+            break;
     }
 }
 

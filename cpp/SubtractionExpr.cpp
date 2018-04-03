@@ -14,12 +14,15 @@ void SubtractionExpr::setMax(Level level) {
         case Level::Basic :
             MIN = 1;
             MAX = 10;
+            break;
         case Level::Normal :
             MIN = 5;
             MAX = 10;
+            break;
         case Level::Advanced :
             MIN = 20;
             MAX = 100;
+            break;
     }
 }
 

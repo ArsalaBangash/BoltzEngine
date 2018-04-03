@@ -15,10 +15,13 @@ void MultiplicationExpr::setMax(Level level) {
     switch (level) {
         case Level::Basic :
             MAX = 5;
+            break;
         case Level::Normal :
             MAX = 9;
+            break;
         case Level::Advanced :
             MAX = 12;
+            break;
     }
 }
 
