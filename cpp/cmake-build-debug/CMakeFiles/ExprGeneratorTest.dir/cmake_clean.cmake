@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ExprGeneratorTest.dir/ExprGeneratorTest.cpp.o"
   "CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.cpp.o"
+  "CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o"
+  "CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o"
   "CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o"
   "CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o"
   "CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o"

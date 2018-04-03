@@ -105,9 +105,57 @@ CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.cpp.o.provides: CMakeFiles/ExprGe
 CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.cpp.o.provides.build: CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.cpp.o
 
 
+CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
+CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o: ../DivisionExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/DivisionExpr.cpp
+
+CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arsalabangash/Programming/BoltzEngine/cpp/DivisionExpr.cpp > CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.i
+
+CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arsalabangash/Programming/BoltzEngine/cpp/DivisionExpr.cpp -o CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.s
+
+CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.requires:
+
+.PHONY : CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.requires
+
+CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.provides: CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.provides.build
+.PHONY : CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.provides
+
+CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.provides.build: CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o
+
+
+CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
+CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o: ../ModulusExpr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/ModulusExpr.cpp
+
+CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arsalabangash/Programming/BoltzEngine/cpp/ModulusExpr.cpp > CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.i
+
+CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arsalabangash/Programming/BoltzEngine/cpp/ModulusExpr.cpp -o CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.s
+
+CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.requires:
+
+.PHONY : CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.requires
+
+CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.provides: CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.provides.build
+.PHONY : CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.provides
+
+CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.provides.build: CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o
+
+
 CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
 CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o: ../EngineUtils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/EngineUtils.cpp
 
 CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.i: cmake_force
@@ -131,7 +179,7 @@ CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o.provides.build: CMakeFiles/Ex
 
 CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
 CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o: ../MathExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/MathExpr.cpp
 
 CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.i: cmake_force
@@ -155,7 +203,7 @@ CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o.provides.build: CMakeFiles/ExprG
 
 CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
 CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o: ../SubtractionExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/SubtractionExpr.cpp
 
 CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.i: cmake_force
@@ -179,7 +227,7 @@ CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
 CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.cpp.o: ../MultiplicationExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/MultiplicationExpr.cpp
 
 CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.cpp.i: cmake_force
@@ -203,7 +251,7 @@ CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.cpp.o.provides.build: CMakeF
 
 CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
 CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.o: ../AdditionExpr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/AdditionExpr.cpp
 
 CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.i: cmake_force
@@ -227,7 +275,7 @@ CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.o.provides.build: CMakeFiles/E
 
 CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.o: CMakeFiles/ExprGeneratorTest.dir/flags.make
 CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.o: ../ExprToken.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.o -c /Users/arsalabangash/Programming/BoltzEngine/cpp/ExprToken.cpp
 
 CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.i: cmake_force
@@ -253,6 +301,8 @@ CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.o.provides.build: CMakeFiles/Expr
 ExprGeneratorTest_OBJECTS = \
 "CMakeFiles/ExprGeneratorTest.dir/ExprGeneratorTest.cpp.o" \
 "CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.cpp.o" \
+"CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o" \
+"CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o" \
 "CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o" \
 "CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o" \
 "CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o" \
@@ -265,6 +315,8 @@ ExprGeneratorTest_EXTERNAL_OBJECTS =
 
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/ExprGeneratorTest.cpp.o
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.cpp.o
+ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o
+ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o
@@ -273,7 +325,7 @@ ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.cpp.o
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/ExprToken.cpp.o
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/build.make
 ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ExprGeneratorTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ExprGeneratorTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ExprGeneratorTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -283,6 +335,8 @@ CMakeFiles/ExprGeneratorTest.dir/build: ExprGeneratorTest
 
 CMakeFiles/ExprGeneratorTest.dir/requires: CMakeFiles/ExprGeneratorTest.dir/ExprGeneratorTest.cpp.o.requires
 CMakeFiles/ExprGeneratorTest.dir/requires: CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.cpp.o.requires
+CMakeFiles/ExprGeneratorTest.dir/requires: CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.cpp.o.requires
+CMakeFiles/ExprGeneratorTest.dir/requires: CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.cpp.o.requires
 CMakeFiles/ExprGeneratorTest.dir/requires: CMakeFiles/ExprGeneratorTest.dir/EngineUtils.cpp.o.requires
 CMakeFiles/ExprGeneratorTest.dir/requires: CMakeFiles/ExprGeneratorTest.dir/MathExpr.cpp.o.requires
 CMakeFiles/ExprGeneratorTest.dir/requires: CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.cpp.o.requires

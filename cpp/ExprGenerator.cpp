@@ -1,5 +1,7 @@
 #include "ExprGenerator.hpp"
 #include "EngineUtils.hpp"
+#include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -59,23 +61,25 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
     vector<MathOperation>::iterator position = find(operations.begin(), operations.end(), currentOp);
     if (position != operations.end()) operations.erase(position);
 
-    MathExpr *expr = MathExpr::ExpressionFactory::createExpression(currentOp, NULL, level);
+    MathExpr *expr = MathExpr::ExpressionFactory::createExpression(currentOp, -999, level);
     vector<ExprToken> newExpressions = expr->produceExpression(subExprLocation);
     expression.insert(end(expression), begin(newExpressions), end(newExpressions));
 
     ExprWithSub *exprWithSub = checkSubExprTokens(expression);
 
     // While sub-expressions still exist, we'll continue to add to the expression
+    std::cout << "size: " << std::to_string(operations.size()) << std::endl;
     while (exprWithSub != NULL) {
+        std::cout << std::to_string(random_index(operations.size())) << std::endl;
         currentOp = operations[random_index(operations.size())];
         subExprLocation = getEmptyTokenLocations(operationsLeft);
         expression = exprWithSub->leftSide;
 
         // Add the newly generated sub expression to the global expression
-        if (exprWithSub->bound != NULL)
+        if (exprWithSub->bound != -999)
             expr = MathExpr::ExpressionFactory::createExpression(currentOp, exprWithSub->bound, level);
         else
-            expr = MathExpr::ExpressionFactory::createExpression(currentOp, NULL, level);
+            expr = MathExpr::ExpressionFactory::createExpression(currentOp, -999, level);
         newExpressions = expr->produceExpression(subExprLocation);
         expression.insert(end(expression), begin(newExpressions), end(newExpressions));
 

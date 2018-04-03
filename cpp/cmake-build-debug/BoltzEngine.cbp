@@ -88,6 +88,12 @@
 		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/AdditionExpr.hpp">
 			<Option target="ExprGeneratorTest"/>
 		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/DivisionExpr.cpp">
+			<Option target="ExprGeneratorTest"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/DivisionExpr.hpp">
+			<Option target="ExprGeneratorTest"/>
+		</Unit>
 		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/EngineUtils.cpp">
 			<Option target="ExprGeneratorTest"/>
 		</Unit>
@@ -116,6 +122,12 @@
 			<Option target="ExprGeneratorTest"/>
 		</Unit>
 		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/MathExpr.hpp">
+			<Option target="ExprGeneratorTest"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/ModulusExpr.cpp">
+			<Option target="ExprGeneratorTest"/>
+		</Unit>
+		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/ModulusExpr.hpp">
 			<Option target="ExprGeneratorTest"/>
 		</Unit>
 		<Unit filename="/Users/arsalabangash/Programming/BoltzEngine/cpp/MultiplicationExpr.cpp">

@@ -10,6 +10,7 @@
 #include "EngineUtils.hpp"
 
 void AdditionExpr::setMax(Level level) {
+
     switch (level) {
         case Level::Basic:
             this->MIN = 1;

@@ -12,10 +12,14 @@ int main() {
 
     std::vector<MathOperation> operations;
     operations.insert(operations.end(), Addition);
-    operations.insert(end(operations), Subtraction);
-    operations.insert(end(operations), Multiplication);
+    operations.insert(operations.end(), Subtraction);
+    operations.insert(operations.end(), Multiplication);
 
     std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Basic);
+
+    for (int i = 0; i < exprTokens.size(); i++) {
+        cout << ExprToken::exprString(exprTokens[i]) << std::endl;
+    }
 
     cout << "exprToken generated successfully\n";
 
