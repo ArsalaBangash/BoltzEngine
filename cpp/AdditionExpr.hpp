@@ -1,24 +1,31 @@
 //
-//  SubtractionExpr.hpp
+//  AdditionExpr.hpp
 //  Boltz
 //
 //  Created by KyoKeun Park on 2018-03-22.
 //  Copyright © 2018 KyoKeun Park. All rights reserved.
 //
 
-#ifndef SubtractionExpr_hpp
-#define SubtractionExpr_hpp
+#ifndef AdditionExpr_hpp
+#define AdditionExpr_hpp
 
 #include "ExprToken.hpp"
 #include "MathExpr.hpp"
 
-class SubtractionExpr: public MathExpr
-{
+class AdditionExpr : public MathExpr {
+public:
+    AdditionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+
+protected:
     void setMax(Level);
+
     void addZeroBoundTokens(SubExprLocation);
+
     void noSubExpressions();
+
     void twoSubExpressions();
-    void oneSubExpressions(SubExprLocation);
+
+    void oneSubExpression(SubExprLocation);
 };
 
-#endif /* SubtractionExpr_hpp */
+#endif /* AdditionExpr_hpp */

@@ -6,13 +6,13 @@
 //  Copyright © 2018 KyoKeun Park. All rights reserved.
 //
 
+#include <iostream>
 #include "AdditionExpr.hpp"
 #include "EngineUtils.hpp"
 
-void AdditionExpr::setMax(Level level)
-{
-    switch (level)
-    {
+void AdditionExpr::setMax(Level level) {
+
+    switch (level) {
         case Level::Basic:
             this->MIN = 1;
             this->MAX = 10;
@@ -28,10 +28,8 @@ void AdditionExpr::setMax(Level level)
     }
 }
 
-void AdditionExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
-{
-    switch(subExprLocation)
-    {
+void AdditionExpr::addZeroBoundTokens(SubExprLocation subExprLocation) {
+    switch (subExprLocation) {
         case SubExprLocation::NEITHER :
             this->expression.insert(this->expression.end(), ExprToken(0));
             this->expression.insert(this->expression.end(), ExprToken(0));
@@ -51,71 +49,56 @@ void AdditionExpr::addZeroBoundTokens(SubExprLocation subExprLocation)
     }
 }
 
-void AdditionExpr::noSubExpressions()
-{
-    if (this->isBounded)
-    {
+void AdditionExpr::noSubExpressions() {
+    if (this->isBounded) {
         int boundedRandom = generatePositiveRandom(MIN, bound);
         expression.insert(expression.end(), ExprToken(boundedRandom));
         expression.insert(expression.end(), ExprToken(bound - boundedRandom));
-    }
-    else
-    {
+    } else {
         expression.insert(expression.end(), ExprToken(generatePositiveRandom(MIN, MAX)));
         expression.insert(expression.end(), ExprToken(generatePositiveRandom(MIN, MAX)));
     }
 }
 
-void AdditionExpr::twoSubExpressions()
-{
-    if (this->isBounded)
-    {
+void AdditionExpr::twoSubExpressions() {
+    if (this->isBounded) {
         int boundedRandom = generatePositiveRandom(MIN, bound);
         int boundedRandomComplement = bound - boundedRandom;
         expression.insert(expression.end(), ExprToken(boundedRandom, true));
         expression.insert(expression.end(), ExprToken(boundedRandomComplement, true));
-    }
-    else
-    {
+    } else {
         expression.insert(expression.end(), ExprToken(true));
         expression.insert(expression.end(), ExprToken(true));
     }
 }
 
-void AdditionExpr::oneSubExpression(SubExprLocation subExprLocation)
-{
+void AdditionExpr::oneSubExpression(SubExprLocation subExprLocation) {
     int boundedRandom, boundedRandomComplement;
-    switch (subExprLocation)
-    {
+    switch (subExprLocation) {
         case SubExprLocation::LEFT :
-            if (this->isBounded)
-            {
+            if (this->isBounded) {
                 boundedRandom = generatePositiveRandom(MIN, bound);
                 boundedRandomComplement = bound - boundedRandom;
                 expression.insert(expression.end(), ExprToken(boundedRandom, true));
                 expression.insert(expression.end(), ExprToken(boundedRandomComplement));
-            }
-            else
-            {
+            } else {
                 expression.insert(expression.end(), ExprToken(true));
                 expression.insert(expression.end(), ExprToken(generatePositiveRandom(MIN, MAX)));
             }
             break;
         case SubExprLocation::RIGHT :
-            if (this->isBounded)
-            {
+            if (this->isBounded) {
                 boundedRandom = generatePositiveRandom(MIN, bound);
                 boundedRandomComplement = bound - boundedRandom;
                 expression.insert(expression.end(), ExprToken(boundedRandom));
                 expression.insert(expression.end(), ExprToken(boundedRandomComplement, true));
-            }
-            else
-            {
+            } else {
                 expression.insert(expression.end(), ExprToken(generatePositiveRandom(MIN, MAX)));
                 expression.insert(expression.end(), ExprToken(true));
             }
             break;
         default: // This is to mute the warning
+            std::cout << "ADDITION: should not happen\n";
             break;
     }
 }

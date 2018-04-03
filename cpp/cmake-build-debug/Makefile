@@ -111,83 +111,197 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named engine-app
+# Target rules for targets named ExprGeneratorTest
 
 # Build rule for target.
-engine-app: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 engine-app
-.PHONY : engine-app
+ExprGeneratorTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExprGeneratorTest
+.PHONY : ExprGeneratorTest
 
 # fast build rule for target.
-engine-app/fast:
-	$(MAKE) -f CMakeFiles/engine-app.dir/build.make CMakeFiles/engine-app.dir/build
-.PHONY : engine-app/fast
-
-#=============================================================================
-# Target rules for targets named ExprGenerator
-
-# Build rule for target.
-ExprGenerator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ExprGenerator
-.PHONY : ExprGenerator
-
-# fast build rule for target.
-ExprGenerator/fast:
-	$(MAKE) -f expressions/CMakeFiles/ExprGenerator.dir/build.make expressions/CMakeFiles/ExprGenerator.dir/build
-.PHONY : ExprGenerator/fast
-
-#=============================================================================
-# Target rules for targets named SubtractionExpr
-
-# Build rule for target.
-SubtractionExpr: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SubtractionExpr
-.PHONY : SubtractionExpr
-
-# fast build rule for target.
-SubtractionExpr/fast:
-	$(MAKE) -f expressions/CMakeFiles/SubtractionExpr.dir/build.make expressions/CMakeFiles/SubtractionExpr.dir/build
-.PHONY : SubtractionExpr/fast
-
-#=============================================================================
-# Target rules for targets named AdditionExpr
-
-# Build rule for target.
-AdditionExpr: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 AdditionExpr
-.PHONY : AdditionExpr
-
-# fast build rule for target.
-AdditionExpr/fast:
-	$(MAKE) -f expressions/CMakeFiles/AdditionExpr.dir/build.make expressions/CMakeFiles/AdditionExpr.dir/build
-.PHONY : AdditionExpr/fast
-
-EngineApp.o: EngineApp.cpp.o
-
-.PHONY : EngineApp.o
+ExprGeneratorTest/fast:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/build
+.PHONY : ExprGeneratorTest/fast
 
 # target to build an object file
-EngineApp.cpp.o:
-	$(MAKE) -f CMakeFiles/engine-app.dir/build.make CMakeFiles/engine-app.dir/EngineApp.cpp.o
-.PHONY : EngineApp.cpp.o
-
-EngineApp.i: EngineApp.cpp.i
-
-.PHONY : EngineApp.i
+AdditionExpr.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.o
+.PHONY : AdditionExpr.o
 
 # target to preprocess a source file
-EngineApp.cpp.i:
-	$(MAKE) -f CMakeFiles/engine-app.dir/build.make CMakeFiles/engine-app.dir/EngineApp.cpp.i
-.PHONY : EngineApp.cpp.i
-
-EngineApp.s: EngineApp.cpp.s
-
-.PHONY : EngineApp.s
+AdditionExpr.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.i
+.PHONY : AdditionExpr.i
 
 # target to generate assembly for a file
-EngineApp.cpp.s:
-	$(MAKE) -f CMakeFiles/engine-app.dir/build.make CMakeFiles/engine-app.dir/EngineApp.cpp.s
-.PHONY : EngineApp.cpp.s
+AdditionExpr.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/AdditionExpr.s
+.PHONY : AdditionExpr.s
+
+# target to build an object file
+BinaryGenerator.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/BinaryGenerator.o
+.PHONY : BinaryGenerator.o
+
+# target to preprocess a source file
+BinaryGenerator.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/BinaryGenerator.i
+.PHONY : BinaryGenerator.i
+
+# target to generate assembly for a file
+BinaryGenerator.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/BinaryGenerator.s
+.PHONY : BinaryGenerator.s
+
+# target to build an object file
+DivisionExpr.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.o
+.PHONY : DivisionExpr.o
+
+# target to preprocess a source file
+DivisionExpr.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.i
+.PHONY : DivisionExpr.i
+
+# target to generate assembly for a file
+DivisionExpr.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/DivisionExpr.s
+.PHONY : DivisionExpr.s
+
+# target to build an object file
+EngineUtils.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/EngineUtils.o
+.PHONY : EngineUtils.o
+
+# target to preprocess a source file
+EngineUtils.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/EngineUtils.i
+.PHONY : EngineUtils.i
+
+# target to generate assembly for a file
+EngineUtils.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/EngineUtils.s
+.PHONY : EngineUtils.s
+
+# target to build an object file
+ExprGenerator.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.o
+.PHONY : ExprGenerator.o
+
+# target to preprocess a source file
+ExprGenerator.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.i
+.PHONY : ExprGenerator.i
+
+# target to generate assembly for a file
+ExprGenerator.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprGenerator.s
+.PHONY : ExprGenerator.s
+
+# target to build an object file
+ExprGeneratorTest.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprGeneratorTest.o
+.PHONY : ExprGeneratorTest.o
+
+# target to preprocess a source file
+ExprGeneratorTest.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprGeneratorTest.i
+.PHONY : ExprGeneratorTest.i
+
+# target to generate assembly for a file
+ExprGeneratorTest.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprGeneratorTest.s
+.PHONY : ExprGeneratorTest.s
+
+# target to build an object file
+ExprToken.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprToken.o
+.PHONY : ExprToken.o
+
+# target to preprocess a source file
+ExprToken.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprToken.i
+.PHONY : ExprToken.i
+
+# target to generate assembly for a file
+ExprToken.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ExprToken.s
+.PHONY : ExprToken.s
+
+# target to build an object file
+InfixConverter.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/InfixConverter.o
+.PHONY : InfixConverter.o
+
+# target to preprocess a source file
+InfixConverter.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/InfixConverter.i
+.PHONY : InfixConverter.i
+
+# target to generate assembly for a file
+InfixConverter.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/InfixConverter.s
+.PHONY : InfixConverter.s
+
+# target to build an object file
+MathExpr.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/MathExpr.o
+.PHONY : MathExpr.o
+
+# target to preprocess a source file
+MathExpr.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/MathExpr.i
+.PHONY : MathExpr.i
+
+# target to generate assembly for a file
+MathExpr.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/MathExpr.s
+.PHONY : MathExpr.s
+
+# target to build an object file
+ModulusExpr.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.o
+.PHONY : ModulusExpr.o
+
+# target to preprocess a source file
+ModulusExpr.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.i
+.PHONY : ModulusExpr.i
+
+# target to generate assembly for a file
+ModulusExpr.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/ModulusExpr.s
+.PHONY : ModulusExpr.s
+
+# target to build an object file
+MultiplicationExpr.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.o
+.PHONY : MultiplicationExpr.o
+
+# target to preprocess a source file
+MultiplicationExpr.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.i
+.PHONY : MultiplicationExpr.i
+
+# target to generate assembly for a file
+MultiplicationExpr.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/MultiplicationExpr.s
+.PHONY : MultiplicationExpr.s
+
+# target to build an object file
+SubtractionExpr.o:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.o
+.PHONY : SubtractionExpr.o
+
+# target to preprocess a source file
+SubtractionExpr.i:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.i
+.PHONY : SubtractionExpr.i
+
+# target to generate assembly for a file
+SubtractionExpr.s:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/SubtractionExpr.s
+.PHONY : SubtractionExpr.s
 
 # Help Target
 help:
@@ -197,13 +311,43 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... engine-app"
-	@echo "... ExprGenerator"
-	@echo "... SubtractionExpr"
-	@echo "... AdditionExpr"
-	@echo "... EngineApp.o"
-	@echo "... EngineApp.i"
-	@echo "... EngineApp.s"
+	@echo "... ExprGeneratorTest"
+	@echo "... AdditionExpr.o"
+	@echo "... AdditionExpr.i"
+	@echo "... AdditionExpr.s"
+	@echo "... BinaryGenerator.o"
+	@echo "... BinaryGenerator.i"
+	@echo "... BinaryGenerator.s"
+	@echo "... DivisionExpr.o"
+	@echo "... DivisionExpr.i"
+	@echo "... DivisionExpr.s"
+	@echo "... EngineUtils.o"
+	@echo "... EngineUtils.i"
+	@echo "... EngineUtils.s"
+	@echo "... ExprGenerator.o"
+	@echo "... ExprGenerator.i"
+	@echo "... ExprGenerator.s"
+	@echo "... ExprGeneratorTest.o"
+	@echo "... ExprGeneratorTest.i"
+	@echo "... ExprGeneratorTest.s"
+	@echo "... ExprToken.o"
+	@echo "... ExprToken.i"
+	@echo "... ExprToken.s"
+	@echo "... InfixConverter.o"
+	@echo "... InfixConverter.i"
+	@echo "... InfixConverter.s"
+	@echo "... MathExpr.o"
+	@echo "... MathExpr.i"
+	@echo "... MathExpr.s"
+	@echo "... ModulusExpr.o"
+	@echo "... ModulusExpr.i"
+	@echo "... ModulusExpr.s"
+	@echo "... MultiplicationExpr.o"
+	@echo "... MultiplicationExpr.i"
+	@echo "... MultiplicationExpr.s"
+	@echo "... SubtractionExpr.o"
+	@echo "... SubtractionExpr.i"
+	@echo "... SubtractionExpr.s"
 .PHONY : help
 
 

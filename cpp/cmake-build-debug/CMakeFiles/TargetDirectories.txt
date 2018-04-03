@@ -1,8 +1,3 @@
 /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles/engine-app.dir
-/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/CMakeFiles/ExprGenerator.dir
-/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/CMakeFiles/rebuild_cache.dir
-/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/CMakeFiles/edit_cache.dir
-/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/CMakeFiles/SubtractionExpr.dir
-/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/expressions/CMakeFiles/AdditionExpr.dir
+/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles/ExprGeneratorTest.dir

@@ -60,172 +60,39 @@ CMAKE_SOURCE_DIR = /Users/arsalabangash/Programming/BoltzEngine/cpp
 CMAKE_BINARY_DIR = /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/engine-app.dir
+# Target rules for target CMakeFiles/ExprGeneratorTest.dir
 
 # All Build rule for target.
-CMakeFiles/engine-app.dir/all:
-	$(MAKE) -f CMakeFiles/engine-app.dir/build.make CMakeFiles/engine-app.dir/depend
-	$(MAKE) -f CMakeFiles/engine-app.dir/build.make CMakeFiles/engine-app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target engine-app"
-.PHONY : CMakeFiles/engine-app.dir/all
+CMakeFiles/ExprGeneratorTest.dir/all:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/depend
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target ExprGeneratorTest"
+.PHONY : CMakeFiles/ExprGeneratorTest.dir/all
 
 # Include target in all.
-all: CMakeFiles/engine-app.dir/all
+all: CMakeFiles/ExprGeneratorTest.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/engine-app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/engine-app.dir/all
+CMakeFiles/ExprGeneratorTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 13
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExprGeneratorTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/engine-app.dir/rule
+.PHONY : CMakeFiles/ExprGeneratorTest.dir/rule
 
 # Convenience name for target.
-engine-app: CMakeFiles/engine-app.dir/rule
+ExprGeneratorTest: CMakeFiles/ExprGeneratorTest.dir/rule
 
-.PHONY : engine-app
-
-# clean rule for target.
-CMakeFiles/engine-app.dir/clean:
-	$(MAKE) -f CMakeFiles/engine-app.dir/build.make CMakeFiles/engine-app.dir/clean
-.PHONY : CMakeFiles/engine-app.dir/clean
+.PHONY : ExprGeneratorTest
 
 # clean rule for target.
-clean: CMakeFiles/engine-app.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory expressions
-
-# Convenience name for "all" pass in the directory.
-expressions/all: expressions/CMakeFiles/ExprGenerator.dir/all
-expressions/all: expressions/CMakeFiles/SubtractionExpr.dir/all
-expressions/all: expressions/CMakeFiles/AdditionExpr.dir/all
-
-.PHONY : expressions/all
-
-# Convenience name for "clean" pass in the directory.
-expressions/clean: expressions/CMakeFiles/ExprGenerator.dir/clean
-expressions/clean: expressions/CMakeFiles/SubtractionExpr.dir/clean
-expressions/clean: expressions/CMakeFiles/AdditionExpr.dir/clean
-
-.PHONY : expressions/clean
-
-# Convenience name for "preinstall" pass in the directory.
-expressions/preinstall:
-
-.PHONY : expressions/preinstall
-
-#=============================================================================
-# Target rules for target expressions/CMakeFiles/ExprGenerator.dir
-
-# All Build rule for target.
-expressions/CMakeFiles/ExprGenerator.dir/all:
-	$(MAKE) -f expressions/CMakeFiles/ExprGenerator.dir/build.make expressions/CMakeFiles/ExprGenerator.dir/depend
-	$(MAKE) -f expressions/CMakeFiles/ExprGenerator.dir/build.make expressions/CMakeFiles/ExprGenerator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target ExprGenerator"
-.PHONY : expressions/CMakeFiles/ExprGenerator.dir/all
-
-# Include target in all.
-all: expressions/CMakeFiles/ExprGenerator.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-expressions/CMakeFiles/ExprGenerator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 expressions/CMakeFiles/ExprGenerator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 0
-.PHONY : expressions/CMakeFiles/ExprGenerator.dir/rule
-
-# Convenience name for target.
-ExprGenerator: expressions/CMakeFiles/ExprGenerator.dir/rule
-
-.PHONY : ExprGenerator
+CMakeFiles/ExprGeneratorTest.dir/clean:
+	$(MAKE) -f CMakeFiles/ExprGeneratorTest.dir/build.make CMakeFiles/ExprGeneratorTest.dir/clean
+.PHONY : CMakeFiles/ExprGeneratorTest.dir/clean
 
 # clean rule for target.
-expressions/CMakeFiles/ExprGenerator.dir/clean:
-	$(MAKE) -f expressions/CMakeFiles/ExprGenerator.dir/build.make expressions/CMakeFiles/ExprGenerator.dir/clean
-.PHONY : expressions/CMakeFiles/ExprGenerator.dir/clean
-
-# clean rule for target.
-clean: expressions/CMakeFiles/ExprGenerator.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target expressions/CMakeFiles/SubtractionExpr.dir
-
-# All Build rule for target.
-expressions/CMakeFiles/SubtractionExpr.dir/all:
-	$(MAKE) -f expressions/CMakeFiles/SubtractionExpr.dir/build.make expressions/CMakeFiles/SubtractionExpr.dir/depend
-	$(MAKE) -f expressions/CMakeFiles/SubtractionExpr.dir/build.make expressions/CMakeFiles/SubtractionExpr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target SubtractionExpr"
-.PHONY : expressions/CMakeFiles/SubtractionExpr.dir/all
-
-# Include target in all.
-all: expressions/CMakeFiles/SubtractionExpr.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-expressions/CMakeFiles/SubtractionExpr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 expressions/CMakeFiles/SubtractionExpr.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 0
-.PHONY : expressions/CMakeFiles/SubtractionExpr.dir/rule
-
-# Convenience name for target.
-SubtractionExpr: expressions/CMakeFiles/SubtractionExpr.dir/rule
-
-.PHONY : SubtractionExpr
-
-# clean rule for target.
-expressions/CMakeFiles/SubtractionExpr.dir/clean:
-	$(MAKE) -f expressions/CMakeFiles/SubtractionExpr.dir/build.make expressions/CMakeFiles/SubtractionExpr.dir/clean
-.PHONY : expressions/CMakeFiles/SubtractionExpr.dir/clean
-
-# clean rule for target.
-clean: expressions/CMakeFiles/SubtractionExpr.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target expressions/CMakeFiles/AdditionExpr.dir
-
-# All Build rule for target.
-expressions/CMakeFiles/AdditionExpr.dir/all:
-	$(MAKE) -f expressions/CMakeFiles/AdditionExpr.dir/build.make expressions/CMakeFiles/AdditionExpr.dir/depend
-	$(MAKE) -f expressions/CMakeFiles/AdditionExpr.dir/build.make expressions/CMakeFiles/AdditionExpr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target AdditionExpr"
-.PHONY : expressions/CMakeFiles/AdditionExpr.dir/all
-
-# Include target in all.
-all: expressions/CMakeFiles/AdditionExpr.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-expressions/CMakeFiles/AdditionExpr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 expressions/CMakeFiles/AdditionExpr.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arsalabangash/Programming/BoltzEngine/cpp/cmake-build-debug/CMakeFiles 0
-.PHONY : expressions/CMakeFiles/AdditionExpr.dir/rule
-
-# Convenience name for target.
-AdditionExpr: expressions/CMakeFiles/AdditionExpr.dir/rule
-
-.PHONY : AdditionExpr
-
-# clean rule for target.
-expressions/CMakeFiles/AdditionExpr.dir/clean:
-	$(MAKE) -f expressions/CMakeFiles/AdditionExpr.dir/build.make expressions/CMakeFiles/AdditionExpr.dir/clean
-.PHONY : expressions/CMakeFiles/AdditionExpr.dir/clean
-
-# clean rule for target.
-clean: expressions/CMakeFiles/AdditionExpr.dir/clean
+clean: CMakeFiles/ExprGeneratorTest.dir/clean
 
 .PHONY : clean
 
