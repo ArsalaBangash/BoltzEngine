@@ -53,50 +53,34 @@ class ExprGenerator {
         }
     }
 
-    /**
-     * Given ar ArrayList of MathOperations and a Level paramater indicating the difficulty, return an 
-     * expression in the form of an ArrayList of ExprTokens
-     *
-     * The expression returned will be in reverse polish notation
-     * e.g The expression (3 + (1-2)) will be [+, 3, -, 1, 2]
-     */
     fun generateExpression(operations: ArrayList<MathOperation>, level: Level): ArrayList<ExprToken> {
         var operationsLeft = operations.size
-        var expression = ArrayList<ExprToken>()
+        var expressionList = ArrayList<ExprToken>()
         var currentOp: MathOperation = operations[randomGenerator.nextInt(operations.size)]
-
-        //Determines whether the current operation will have numbers or sub-expressions on either side
         var subExprLocation: SubExprLocation = getEmptyTokenLocations(operationsLeft)
-
         operationsLeft -= reduceOperationsBy(subExprLocation)
         operations.remove(currentOp)
-        expression.addAll(MathExpr.createExpression(currentOp, null, level)!!
+        expressionList.addAll(MathExpr.createExpression(currentOp, null, level)!!
                 .produceExpression(subExprLocation))
-        var exprWithSub = checkSubExprTokens(expression)
-        
-        //While sub-expressions still exist, we'll continue to add to the expression
+        var exprWithSub = checkSubExprTokens(expressionList)
         while (exprWithSub != null) {
             currentOp = operations[randomGenerator.nextInt(operations.size)]
             subExprLocation = getEmptyTokenLocations(operationsLeft)
-            expression = exprWithSub.leftSide
-
-            //Add the newly generated sub-expression to the global expression
+            expressionList = exprWithSub.leftSide
             if (exprWithSub.bound != null) {
-                expression.addAll((MathExpr.createExpression(currentOp, exprWithSub.bound, level) as MathExpr)
+                expressionList.addAll((MathExpr.createExpression(currentOp, exprWithSub.bound, level) as MathExpr)
                         .produceExpression(subExprLocation))
             } else {
-                expression.addAll(MathExpr.createExpression(currentOp, null, level)!!
+                expressionList.addAll(MathExpr.createExpression(currentOp, null, level)!!
                         .produceExpression(subExprLocation))
             }
-
-            //Add the right side of the previously global expression and check again for any Sub-Expression Tokens
-            expression.addAll(exprWithSub.rightSide)
+            expressionList.addAll(exprWithSub.rightSide)
             operations.remove(currentOp)
             operationsLeft -= reduceOperationsBy(subExprLocation)
-            exprWithSub = checkSubExprTokens(expression)
+            exprWithSub = checkSubExprTokens(expressionList)
         }
 
-        return expression
+        return expressionList
     }
 
     /**
@@ -108,9 +92,9 @@ class ExprGenerator {
             if (expressionList[i].hasSubExpr) {
                 val bound = expressionList[i].intVal
                 expressionList.removeAt(i)
-                val preEmptyTokens = ArrayList(expressionList.subList(0, i))
-                val postEmptyTokens = ArrayList(expressionList.subList(i, expressionList.size))
-                return ExprWithSub(bound, preEmptyTokens, postEmptyTokens)
+                val preEmptyToken = ArrayList(expressionList.subList(0, i))
+                val postEmptyToken = ArrayList(expressionList.subList(i, expressionList.size))
+                return ExprWithSub(bound, preEmptyToken, postEmptyToken)
             }
         }
         return null

@@ -12,4 +12,3 @@ using namespace std;
 //    cout << "generatePositiveRandom2: " << generatePositiveRandom(100) << endl;
 //    cout << "generatePosNegRandom: " << generatePosNegRandom(100) << endl;
 //}
-
