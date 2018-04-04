@@ -4,6 +4,7 @@
 #include "SubtractionExpr.hpp"
 #include "EngineUtils.hpp"
 #include "BinaryGenerator.hpp"
+#include "FactorizationGenerator.hpp"
 #include "InfixConverter.h"
 
 using namespace std;
