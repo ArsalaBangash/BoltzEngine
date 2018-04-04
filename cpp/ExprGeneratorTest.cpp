@@ -8,6 +8,7 @@
 #include "FactorizationGenerator.hpp"
 #include "InfixConverter.h"
 #include "LatexConverter.hpp"
+#include "HexGenerator.hpp"
 
 using namespace std;
 
@@ -83,6 +84,9 @@ int main() {
     std::string lcExprOutput = lc->exprToLatex(exprTokens);
     cout << "\n" << lcExprOutput << endl;
     cout << icExprOutput << endl;
+
+    HexChallenge hc = generateHexQuestion(Advanced);
+    cout << hc.decimal << "\t" << hc.hex << endl;
 
     cout << "exprToken generated successfully\n";
 
