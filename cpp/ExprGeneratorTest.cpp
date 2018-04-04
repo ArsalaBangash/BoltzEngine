@@ -4,6 +4,7 @@
 #include "SubtractionExpr.hpp"
 #include "EngineUtils.hpp"
 #include "BinaryGenerator.hpp"
+#include "FactorizationGenerator.hpp"
 
 using namespace std;
 
@@ -28,9 +29,10 @@ int main() {
 
     cout << binary->binary << " : " << binary->decimal << endl;
 
-    cout << "exprToken generated successfully\n";
+    FactorizationGenerator *fact = new FactorizationGenerator();
+    fact->getExpandedParams("1+2-3");
 
-    //cout << std::to_string(random(0, 1)) << endl;
+    cout << "exprToken generated successfully\n";
 
     return 0;
 }

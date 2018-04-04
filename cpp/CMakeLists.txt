@@ -1,3 +1,5 @@
 project(BoltzEngine)
 set(CMAKE_CXX_STANDARD 11)
-add_executable(ExprGeneratorTest ExprGeneratorTest.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp)
+set(BOOST_REGEX -lboost_regex)
+add_definitions(${BOOST_REGEX})
+add_executable(ExprGeneratorTest ExprGeneratorTest.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp FactorizationGenerator.cpp FactorizationGenerator.hpp)
