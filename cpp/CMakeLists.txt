@@ -19,4 +19,3 @@ if (Boost_FOUND)
 
     target_link_libraries(ExprGeneratorTest ${Boost_LIBRARIES})
 endif()
-
