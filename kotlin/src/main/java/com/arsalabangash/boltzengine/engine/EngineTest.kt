@@ -11,7 +11,7 @@ val infix = InfixConverter()
 
 fun main(args: Array<String>) {
     val mathOps = arrayListOf<MathOperation>(MathOperation.Modulus)
-    for (i in 0..1000) {
+    for (i in 0..10000) {
         val ops = getOps(mathOps)
         printExpr(gen.generateExpression(ops, Level.Advanced))
     }

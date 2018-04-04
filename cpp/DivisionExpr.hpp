@@ -13,18 +13,18 @@
 #include "ExprToken.hpp"
 
 class DivisionExpr : public MathExpr {
-    void setMax(Level);
+    void setMax(Level) override;
 
-    void addZeroBoundTokens(SubExprLocation);
+    void addZeroBoundTokens(SubExprLocation) override;
 
-    void noSubExpressions();
+    void noSubExpressions() override;
 
-    void twoSubExpressions();
+    void twoSubExpressions() override;
 
-    void oneSubExpression(SubExprLocation);
+    void oneSubExpression(SubExprLocation) override;
 
 public:
-    DivisionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+    explicit DivisionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
 
 private:
     int generateDivisor(int);

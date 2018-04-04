@@ -28,10 +28,10 @@ int main() {
 
     time_t start_s = clock();
     // the code you wish to time goes here
-    int i = 100;
+    int i = 100000;
     while (i > 0) {
         std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
-        cout << infixConverter->exprToInfix(exprTokens) << endl;
+//        cout << infixConverter->exprToInfix(exprTokens) << endl;
         i--;
     }
     time_t stop_s = clock();
@@ -44,10 +44,10 @@ int main() {
     auto *fact = new FactorizationGenerator();
     vector<int> int_list = fact->getExpandedParams("1+2-3");
 
-    auto *lc = new LatexConverter();
-    std::vector<ExprToken> lcExprTest = ExprGenerator::generateExpression(operations, Normal);
-    std::string lcExprOutput = lc->exprToLatex(lcExprTest);
-    cout << lcExprOutput << endl;
+//    auto *lc = new LatexConverter();
+//    std::vector<ExprToken> lcExprTest = ExprGenerator::generateExpression(operations, Normal);
+//    std::string lcExprOutput = lc->exprToLatex(lcExprTest);
+//    cout << lcExprOutput << endl;
 
     cout << "exprToken generated successfully\n";
 

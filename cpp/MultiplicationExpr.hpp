@@ -13,20 +13,20 @@
 #include "MathExpr.hpp"
 
 class MultiplicationExpr : public MathExpr {
-    void setMax(Level);
+    void setMax(Level) override;
 
-    void addZeroBoundTokens(SubExprLocation);
+    void addZeroBoundTokens(SubExprLocation) override;
 
-    void noSubExpressions();
+    void noSubExpressions() override;
 
-    void twoSubExpressions();
+    void twoSubExpressions() override;
 
-    void oneSubExpression(SubExprLocation);
+    void oneSubExpression(SubExprLocation) override;
 
-    std::vector<ExprToken> produceExpression(SubExprLocation);
+    std::vector<ExprToken> produceExpression(SubExprLocation) override;
 
 public:
-    MultiplicationExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+    explicit MultiplicationExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
 
 private:
     std::vector<std::vector<int> > multiples;

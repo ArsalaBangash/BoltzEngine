@@ -4,6 +4,7 @@
 
 #include <boost/algorithm/string.hpp>
 #include "LatexConverter.hpp"
+#include <vector>
 
 LatexConverter::LatexConverter() {
     opRepresentationMap.emplace(Addition, addLatex);
@@ -13,14 +14,14 @@ LatexConverter::LatexConverter() {
     opRepresentationMap.emplace(Division, divLatex);
 }
 
-std::string LatexConverter::exprToLatex(std::vector<ExprToken>& expressions) {
+std::string LatexConverter::exprToLatex(std::vector<ExprToken> &expressions) {
     std::stack<std::string> expressionStack;
     std::reverse(begin(expressions), end(expressions)); // reverse the expressions list
-    for (int i = 0; i < expressions.size(); i++) {
-        if (expressions[i].mathOperation == Invalid) {
-            MathOperation currentOp = expressions[i].mathOperation;
+    for (auto &expression : expressions) {
+        if (expression.mathOperation == Invalid) {
+            MathOperation currentOp = expression.mathOperation;
             expressionStack.push(opRepresentationMap[currentOp](expressionStack));
-        } else expressionStack.push(std::to_string(expressions[i].intVal));
+        } else expressionStack.push(std::to_string(expression.intVal));
     }
     std::string latexExpr = getAndPop(expressionStack);
     if (boost::starts_with(latexExpr, "(") && boost::ends_with(latexExpr, ")"))
@@ -28,9 +29,9 @@ std::string LatexConverter::exprToLatex(std::vector<ExprToken>& expressions) {
     else return std::string("$$").append(latexExpr).append("$$");
 }
 
-std::string LatexConverter::factorToLatex(std::vector<int> expandedParams) {
+std::string LatexConverter::factorToLatex(std::vector<int> &expandedParams) {
     std::string factorLatex("$$");
-    if (expandedParams[2] == 1)
+    if (expandedParams.at(1) == 1)
         factorLatex.append("x^{2}");
     else
         factorLatex.append(std::to_string(expandedParams[2])).append("x^2");

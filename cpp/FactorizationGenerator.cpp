@@ -28,7 +28,7 @@ void FactorizationGenerator::setMax(Level level) {
 
 FactorizationGenerator::FactorParams FactorizationGenerator::generateFactorParams(Level level) {
     setMax(level);
-    FactorizationGenerator::FactorParams fp;
+    FactorizationGenerator::FactorParams fp{};
     fp.xCoeff1 = generatePositiveRandom(xCoeffMax);
     fp.xCoeff2 = generatePositiveRandom(xCoeffMax);
     fp.const1 = generatePositiveRandom(constMax);
