@@ -49,8 +49,8 @@ SubExprLocation ExprGenerator::getEmptyTokenLocations(int operationsLeft) {
  */
 std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperation> operations,
                                                          Level level) {
-    std::vector<ExprToken> newExpressions;
-    int operationsLeft = static_cast<int>(operations.size());
+    std::vector<ExprToken> newExpr;
+    auto operationsLeft = static_cast<int>(operations.size());
     vector<ExprToken> expression;
     auto index = random_index(operations.size());
     MathOperation currentOp = operations[index];
@@ -60,13 +60,15 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
 
     operationsLeft -= reduceOperationsBy(subExprLocation);
 
-    vector<MathOperation>::iterator position = find(operations.begin(), operations.end(), currentOp);
+    auto position = find(operations.begin(), operations.end(), currentOp);
     if (position != operations.end()) operations.erase(position);
 
     MathExpr *expr = MathExpr::ExpressionFactory::createExpression(currentOp, -999, level);
-    newExpressions = expr->produceExpression(subExprLocation);
-    expression.insert(end(expression), begin(newExpressions), end(newExpressions));
-
+    newExpr = expr->produceExpression(subExprLocation);
+    expression.reserve(newExpr.size());
+    for (auto token: newExpr) {
+        expression.emplace_back(token);
+    }
     ExprWithSub *exprWithSub = checkSubExprTokens(expression);
 
     // While sub-expressions still exist, we'll continue to add to the expression
@@ -80,13 +82,15 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
             expr = MathExpr::ExpressionFactory::createExpression(currentOp, exprWithSub->bound, level);
         else
             expr = MathExpr::ExpressionFactory::createExpression(currentOp, -999, level);
-        newExpressions = expr->produceExpression(subExprLocation);
-        expression.insert(end(expression), begin(newExpressions), end(newExpressions));
-
+        newExpr = expr->produceExpression(subExprLocation);
+        for (auto token: newExpr) {
+            expression.emplace_back(token);
+        }
         // Add the right side of the previously global expression and
         // check again for any Sub-Expression Tokens
-//        expression.insert(end(expression), begin(exprWithSub->rightSide), end(exprWithSub->rightSide));
-        expression.insert(expression.end(), exprWithSub->rightSide.begin(), exprWithSub->rightSide.end());
+        for (auto token: exprWithSub->rightSide) {
+            expression.emplace_back(token);
+        }
         position = find(operations.begin(), operations.end(), currentOp);
         if (position != operations.end()) operations.erase(position);
         operationsLeft -= reduceOperationsBy(subExprLocation);

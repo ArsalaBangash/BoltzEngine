@@ -26,8 +26,13 @@
       <file leaf-file-name="ExprGeneratorTest.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ExprGeneratorTest.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="90">
               <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+=======
+            <state relative-caret-position="330">
+              <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+>>>>>>> master
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -38,11 +43,16 @@
       <file leaf-file-name="LatexConverter.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LatexConverter.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="120">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#49#86#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="1140">
+              <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -50,8 +60,13 @@
       <file leaf-file-name="DivisionExpr.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DivisionExpr.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="332">
               <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+=======
+            <state relative-caret-position="315">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+>>>>>>> master
               <folding>
                 <element signature="e#140#167#0" expanded="true" />
               </folding>
@@ -59,6 +74,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="MultiplicationExpr.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MultiplicationExpr.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,6 +92,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="122">
               <caret line="1395" selection-start-line="1395" selection-end-line="1395" />
+=======
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -83,12 +106,17 @@
       <file leaf-file-name="ExprGenerator.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExprGenerator.hpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="195">
+=======
+            <state relative-caret-position="255">
+>>>>>>> master
               <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="FactorizationGenerator.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FactorizationGenerator.hpp">
           <provider selected="true" editor-type-id="text-editor" />
@@ -96,6 +124,40 @@
       </file>
       <file leaf-file-name="FactorizationGenerator.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FactorizationGenerator.cpp">
+=======
+      <file leaf-file-name="ExprGeneratorTest.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ExprGeneratorTest.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vector" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="1061" selection-start-line="1061" selection-end-line="1061" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiplicationExpr.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MultiplicationExpr.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EngineApp.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EngineApp.h">
+>>>>>>> master
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
               <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
@@ -106,6 +168,7 @@
       <file leaf-file-name="MultiplicationExpr.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MultiplicationExpr.hpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="372">
               <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding>
@@ -120,6 +183,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
               <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="36" />
+=======
+            <state relative-caret-position="15">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
+>>>>>>> master
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -146,11 +213,11 @@
       <list>
         <option value="$PROJECT_DIR$/test.cpp" />
         <option value="$PROJECT_DIR$/expressions/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/ExprToken.hpp" />
         <option value="$PROJECT_DIR$/InfixConverter.h" />
         <option value="$PROJECT_DIR$/MathExpr.hpp" />
         <option value="$PROJECT_DIR$/InfixConverter.cpp" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/LatexConverter.hpp" />
         <option value="$PROJECT_DIR$/DivisionExpr.hpp" />
         <option value="$PROJECT_DIR$/DivisionExpr.cpp" />
@@ -158,6 +225,9 @@
         <option value="$PROJECT_DIR$/LatexConverter.cpp" />
         <option value="$PROJECT_DIR$/FactorizationGenerator.cpp" />
         <option value="$PROJECT_DIR$/MultiplicationExpr.cpp" />
+=======
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+>>>>>>> master
         <option value="$PROJECT_DIR$/ExprGeneratorTest.cpp" />
       </list>
     </option>
@@ -172,7 +242,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,6 +253,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,27 +292,46 @@
       <option name="presentableId" value="Default" />
       <updated>1522703939686</updated>
       <workItem from="1522703942004" duration="1486000" />
+<<<<<<< HEAD
       <workItem from="1522860475046" duration="1339000" />
+=======
+      <workItem from="1522801881921" duration="1090000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="11563000" />
+=======
+    <option name="totallyTimeSpent" value="9725000" />
+>>>>>>> master
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24242425" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
+>>>>>>> master
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.55151516" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32848486" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.609697" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32848486" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49333334" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29939395" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32896462" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36727273" />
+>>>>>>> master
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -262,6 +351,81 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/expressions/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/expressions/CMakeLists.txt" />
+=======
+    <entry file="file://$PROJECT_DIR$/ExprGenerator.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EngineApp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExprGenerator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InfixConverter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#127#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExprGeneratorTest.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExprGenerator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> master
+    <entry file="file://$PROJECT_DIR$/EngineApp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/expressions/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/expressions/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/EngineApp.h">
@@ -271,6 +435,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/expressions/Enums.h" />
     <entry file="file://$PROJECT_DIR$/EngineApp.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -307,6 +472,16 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/MultiplicationExpr.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/SubtractionExpr.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -423,7 +598,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/InfixConverter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="345">
           <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding>
             <element signature="e#127#144#0" expanded="true" />
@@ -433,7 +608,7 @@
     </entry>
     <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/stack">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="2835">
           <caret line="189" selection-start-line="189" selection-end-line="189" />
         </state>
       </provider>
@@ -491,6 +666,7 @@
     </entry>
     <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1710">
           <caret line="114" column="43" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
         </state>
@@ -548,19 +724,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+=======
+        <state relative-caret-position="1140">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExprGenerator.cpp">
+    <entry file="file://$PROJECT_DIR$/InfixConverter.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="336">
           <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="36" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+=======
+        <state relative-caret-position="330">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+          <folding>
+            <element signature="e#51#68#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/MultiplicationExpr.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -587,6 +775,42 @@
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#49#86#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/ExprGenerator.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="1061" selection-start-line="1061" selection-end-line="1061" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MultiplicationExpr.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExprGenerator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
@@ -610,8 +834,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ExprGeneratorTest.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="90">
           <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+=======
+        <state relative-caret-position="384">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+>>>>>>> master
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

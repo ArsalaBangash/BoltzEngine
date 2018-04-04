@@ -3,4 +3,11 @@
 .vscode
 .idea
 cpp/cmake-build-debug/
-./*/.DS_Store
+cpp/cmake-build-debug/**
+./**/.DS_Store
+./**/.idea
+kotlin/out
+kotlin/out/**
+kotlin/.idea/**
+kotlin/.idea/
+kotlin/.idea/workspace.xml

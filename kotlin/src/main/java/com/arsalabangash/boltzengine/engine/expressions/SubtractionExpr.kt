@@ -4,6 +4,7 @@ import com.arsalabangash.boltzengine.engine.enums.Level
 import com.arsalabangash.boltzengine.engine.enums.MathOperation
 import com.arsalabangash.boltzengine.engine.enums.SubExprLocation
 import com.arsalabangash.boltzengine.engine.generatePositiveRandom
+import kotlin.math.abs
 
 class SubtractionExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
 
@@ -48,9 +49,16 @@ class SubtractionExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
 
     override fun noSubExpressions() {
         if (this.isBounded) {
-            val boundedRandom: Int = generatePositiveRandom(bound!!)
-            expression.add(ExprToken(boundedRandom + bound!!))
-            expression.add(ExprToken(boundedRandom))
+            if (bound!! < 0) {
+                val boundedRandom: Int = generatePositiveRandom(abs(bound!!))
+                expression.add(ExprToken(boundedRandom))
+                expression.add(ExprToken(boundedRandom + abs(bound!!)))
+            } else {
+                val boundedRandom: Int = generatePositiveRandom(bound!!)
+                expression.add(ExprToken(boundedRandom + bound!!))
+                expression.add(ExprToken(boundedRandom))
+            }
+
         } else {
             expression.add(ExprToken(generatePositiveRandom(MAX)))
             expression.add(ExprToken(generatePositiveRandom(MAX)))
@@ -59,10 +67,15 @@ class SubtractionExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
 
     override fun twoSubExpressions() {
         if (this.isBounded) {
-            val boundedRandom = generatePositiveRandom(bound!!)
-            val boundedRandomComplement = bound!! + boundedRandom
-            expression.add(ExprToken(boundedRandomComplement, hasSubExpr = true))
-            expression.add(ExprToken(boundedRandom, hasSubExpr = true))
+            val boundedRandom = generatePositiveRandom(abs(bound!!))
+            val boundedRandomComplement = abs(bound!!) + boundedRandom
+            if (bound!! > 0) {
+                expression.add(ExprToken(boundedRandomComplement, hasSubExpr = true))
+                expression.add(ExprToken(boundedRandom))
+            } else {
+                expression.add(ExprToken(boundedRandom))
+                expression.add(ExprToken(boundedRandomComplement, hasSubExpr = true))
+            }
         } else {
             expression.add(ExprToken(hasSubExpr = true))
             expression.add(ExprToken(hasSubExpr = true))
@@ -74,10 +87,15 @@ class SubtractionExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
         when (subExprLocation) {
             SubExprLocation.LEFT -> {
                 if (this.isBounded) {
-                    val boundedRandom = generatePositiveRandom(bound!!)
-                    val boundedRandomComplement = bound!! + boundedRandom
-                    expression.add(ExprToken(boundedRandomComplement, hasSubExpr = true))
-                    expression.add(ExprToken(boundedRandom))
+                    val boundedRandom = generatePositiveRandom(abs(bound!!))
+                    val boundedRandomComplement = abs(bound!!) + boundedRandom
+                    if (bound!! > 0) {
+                        expression.add(ExprToken(boundedRandomComplement, hasSubExpr = true))
+                        expression.add(ExprToken(boundedRandom))
+                    } else {
+                        expression.add(ExprToken(boundedRandom))
+                        expression.add(ExprToken(boundedRandomComplement, hasSubExpr = true))
+                    }
                 } else {
                     expression.add(ExprToken(hasSubExpr = true))
                     expression.add(ExprToken(generatePositiveRandom(MAX)))
@@ -85,10 +103,15 @@ class SubtractionExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
             }
             SubExprLocation.RIGHT -> {
                 if (this.isBounded) {
-                    val boundedRandom = generatePositiveRandom(bound!!)
-                    val boundedRandomComplement = bound!! + boundedRandom
-                    expression.add(ExprToken(boundedRandomComplement))
-                    expression.add(ExprToken(boundedRandom, hasSubExpr = true))
+                    val boundedRandom = generatePositiveRandom(abs(bound!!))
+                    val boundedRandomComplement = abs(bound!!) + boundedRandom
+                    if (bound!! > 0) {
+                        expression.add(ExprToken(boundedRandomComplement))
+                        expression.add(ExprToken(boundedRandom, hasSubExpr = true))
+                    } else {
+                        expression.add(ExprToken(boundedRandom, hasSubExpr = true))
+                        expression.add(ExprToken(boundedRandomComplement))
+                    }
                 } else {
                     expression.add(ExprToken(generatePositiveRandom(MAX)))
                     expression.add(ExprToken(hasSubExpr = true))
