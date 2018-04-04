@@ -31,11 +31,11 @@ int main() {
 
     std::vector<MathOperation> operations;
     operations.emplace_back(Addition);
-    operations.emplace_back(Addition);
-    operations.emplace_back(Addition);
-//    operations.emplace_back(Subtraction);
-//    operations.emplace_back(Multiplication);
-//    operations.emplace_back(Division);
+//    operations.emplace_back(Addition);
+//    operations.emplace_back(Addition);
+    operations.emplace_back(Subtraction);
+    operations.emplace_back(Multiplication);
+    operations.emplace_back(Division);
 
     /*
     InfixConverter *infixConverter = new InfixConverter;
