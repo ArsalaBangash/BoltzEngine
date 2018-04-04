@@ -25,6 +25,6 @@ int generatePositiveRandom(int max);
 
 int generatePosNegRandom(int range);
 
-std::string getAndPop(std::stack<std::string>);
+std::string getAndPop(std::stack<std::string>*);
 
 #endif /* EngineUtils_hpp */

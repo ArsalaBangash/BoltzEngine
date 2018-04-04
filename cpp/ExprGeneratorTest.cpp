@@ -24,6 +24,7 @@ int main() {
     operations.insert(operations.end(), Multiplication);
     operations.emplace_back(Division);
 
+    /*
     InfixConverter *infixConverter = new InfixConverter;
 
     time_t start_s = clock();
@@ -48,6 +49,20 @@ int main() {
     std::vector<ExprToken> lcExprTest = ExprGenerator::generateExpression(operations, Normal);
     std::string lcExprOutput = lc->exprToLatex(lcExprTest);
     cout << lcExprOutput << endl;
+     */
+
+    auto *lc = new LatexConverter();
+    auto *ic = new InfixConverter();
+    std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Basic);
+
+    for (int i = 0; i < exprTokens.size(); i++) {
+        cout << ExprToken::exprString(exprTokens[i]) << endl;
+    }
+
+    std::string lcExprOutput = lc->exprToLatex(exprTokens);
+    std::string icExprOutput = ic->exprToInfix(exprTokens);
+    cout << "\n" << lcExprOutput << endl;
+    cout << icExprOutput << endl;
 
     cout << "exprToken generated successfully\n";
 

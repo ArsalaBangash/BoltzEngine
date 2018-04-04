@@ -39,8 +39,8 @@ int generatePosNegRandom(int range) {
     return (int) random(-range, range);
 }
 
-std::string getAndPop(std::stack<std::string> strStack) {
-    std::string tmp(strStack.top());
-    strStack.pop();
+std::string getAndPop(std::stack<std::string> *strStack) {
+    std::string tmp(strStack->top());
+    strStack->pop();
     return tmp;
 }
