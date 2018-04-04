@@ -5,6 +5,7 @@
 #include <boost/algorithm/string.hpp>
 #include <iostream>
 #include "LatexConverter.hpp"
+#include <vector>
 
 LatexConverter::LatexConverter() {
     opRepresentationMap.emplace(Addition, addLatex);
@@ -14,13 +15,11 @@ LatexConverter::LatexConverter() {
     opRepresentationMap.emplace(Division, divLatex);
 }
 
-std::string LatexConverter::exprToLatex(std::vector<ExprToken>& expressions) {
+std::string LatexConverter::exprToLatex(std::vector<ExprToken> expressions) {
     std::stack<std::string> expressionStack;
-    std::reverse(begin(expressions), end(expressions)); // reverse the expressions list
-
     std::cout << std::endl;
 
-    for (int i = 0; i < expressions.size(); i++) {
+    for (int i = static_cast<int>(expressions.size() - 1); i >= 0; i--) {
         if (expressions[i].intVal == -999) {
             MathOperation currentOp = expressions[i].mathOperation;
             expressionStack.push(opRepresentationMap[currentOp](expressionStack));
@@ -29,14 +28,19 @@ std::string LatexConverter::exprToLatex(std::vector<ExprToken>& expressions) {
     }
 
     std::string latexExpr = getAndPop(&expressionStack);
+    std::cout << std::endl << latexExpr << "\t" << std::to_string(expressionStack.size()) << std::endl;
+    for (int i = 0; i < expressionStack.size(); i++) {
+        std::cout << expressionStack.top() << std::endl;
+    }
+    return std::string("test");
     if (boost::starts_with(latexExpr, "(") && boost::ends_with(latexExpr, ")"))
         return std::string("$$").append(latexExpr.substr(1, latexExpr.size() - 2)).append("$$");
     else return std::string("$$").append(latexExpr).append("$$");
 }
 
-std::string LatexConverter::factorToLatex(std::vector<int> expandedParams) {
+std::string LatexConverter::factorToLatex(std::vector<int> &expandedParams) {
     std::string factorLatex("$$");
-    if (expandedParams[2] == 1)
+    if (expandedParams.at(1) == 1)
         factorLatex.append("x^{2}");
     else
         factorLatex.append(std::to_string(expandedParams[2])).append("x^2");

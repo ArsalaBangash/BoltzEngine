@@ -10,21 +10,38 @@ val gen = ExprGenerator()
 val infix = InfixConverter()
 
 fun main(args: Array<String>) {
-    val mathOps = arrayListOf<MathOperation>(MathOperation.Modulus)
+//    val mathOps = arrayListOf<MathOperation>(MathOperation.Modulus)
+//    val startTime = System.currentTimeMillis()
+//    val numExpressions = 100000
+//    for (i in 1..numExpressions) {
+//        val ops = arrayListOf<MathOperation>(MathOperation.Addition, MathOperation.Subtraction,
+//                MathOperation.Division, MathOperation.Multiplication)
+////        printExpr(gen.generateExpression(ops, Level.Advanced))
+//        gen.generateExpression(ops, Level.Advanced)
+//    }
+//    val endTime = System.currentTimeMillis()
+//    println("Generated $numExpressions expressions in " + (endTime - startTime) + " milliseconds")
+
+    val numExpressions = 100000L
+    var acc = 0L
+    (1..20).forEach {
+        acc += testTime(numExpressions)
+    }
+    println("Generated $numExpressions expressions in " + (acc / 20) + " milliseconds")
+
+}
+
+fun testTime(numExpressions: Long): Long {
     val startTime = System.currentTimeMillis()
-    val numExpressions = 1000000
     for (i in 1..numExpressions) {
-        val ops = arrayListOf<MathOperation>(MathOperation.Addition, MathOperation.Subtraction,
-                MathOperation.Division, MathOperation.Multiplication)
+        val ops = arrayListOf<MathOperation>(MathOperation.Addition)
+//        val ops = arrayListOf<MathOperation>(MathOperation.Addition, MathOperation.Subtraction,
+//                MathOperation.Division, MathOperation.Multiplication)
 //        printExpr(gen.generateExpression(ops, Level.Advanced))
         gen.generateExpression(ops, Level.Advanced)
     }
-
     val endTime = System.currentTimeMillis()
-
-    println("Generated $numExpressions expressions in " + (endTime - startTime) + " milliseconds")
-
-
+    return endTime - startTime
 }
 
 fun printExpr(expr: ArrayList<ExprToken>) {

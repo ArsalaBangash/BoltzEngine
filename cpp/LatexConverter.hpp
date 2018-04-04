@@ -18,8 +18,8 @@ class LatexConverter {
 
 public:
     LatexConverter();
-    std::string exprToLatex(std::vector<ExprToken>&);
-    std::string factorToLatex(std::vector<int>);
+    std::string exprToLatex(std::vector<ExprToken>);
+    std::string factorToLatex(std::vector<int>&);
 
 private:
     std::map<MathOperation, std::function<std::string(std::stack<std::string>)>> opRepresentationMap;
