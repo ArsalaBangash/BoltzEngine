@@ -5,6 +5,7 @@ import com.arsalabangash.boltzengine.engine.enums.MathOperation
 import com.arsalabangash.boltzengine.engine.enums.SubExprLocation
 import com.arsalabangash.boltzengine.engine.generatePositiveRandom
 import java.util.*
+import kotlin.math.abs
 
 class MultiplicationExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
 
@@ -44,10 +45,20 @@ class MultiplicationExpr(mathOperation: MathOperation) : MathExpr(mathOperation)
 
     override fun produceExpression(subExprLocation: SubExprLocation): ArrayList<ExprToken> {
         if (this.isBounded) {
-            multiples = (1..bound!!)
+            val absBound = abs(bound!!)
+            multiples = (1..absBound)
                     .toList()
-                    .filter { it % bound!! == 0 }
-                    .map { intArrayOf(it, it / bound!!) }
+                    .filter { absBound % it == 0 }
+                    .map { intArrayOf(it, absBound / it) }
+                    .map {
+                        if (bound!! < 0) {
+                            if (randomGenerator.nextBoolean()) {
+                                intArrayOf(it[0], it[1] * -1)
+                            } else {
+                                intArrayOf(it[0] * -1, it[1])
+                            }
+                        } else intArrayOf(it[0], it[1])
+                    }
         }
         return super.produceExpression(subExprLocation)
     }

@@ -4,6 +4,7 @@ import com.arsalabangash.boltzengine.engine.enums.Level
 import com.arsalabangash.boltzengine.engine.enums.MathOperation
 import com.arsalabangash.boltzengine.engine.enums.SubExprLocation
 import com.arsalabangash.boltzengine.engine.generatePositiveRandom
+import kotlin.math.abs
 
 class DivisionExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
 
@@ -48,8 +49,8 @@ class DivisionExpr(mathOperation: MathOperation) : MathExpr(mathOperation) {
     }
 
     internal fun generateDivisor(bound: Int): Int {
-        if (bound > MAX * MAX) return 2
-        else return randomGenerator.nextInt(MAX * MAX / bound) + 1
+        if (abs(bound) > MAX * MAX) return 2
+        else return randomGenerator.nextInt(MAX * MAX / abs(bound)) + 1
     }
 
     override fun noSubExpressions() {
