@@ -12,7 +12,7 @@ val infix = InfixConverter()
 fun main(args: Array<String>) {
     val mathOps = arrayListOf<MathOperation>(MathOperation.Modulus)
     val startTime = System.currentTimeMillis()
-    val numExpressions = 1000000
+    val numExpressions = 1000000000000
     for (i in 1..numExpressions) {
         val ops = arrayListOf<MathOperation>(MathOperation.Addition, MathOperation.Subtraction,
                 MathOperation.Division, MathOperation.Multiplication)
