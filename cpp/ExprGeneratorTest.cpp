@@ -25,7 +25,7 @@ int main() {
 
     time_t start_s = clock();
     // the code you wish to time goes here
-    int i = 100;
+    int i = 1000000;
     while (i > 0) {
         std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
         cout << infixConverter->exprToInfix(exprTokens) << endl;
