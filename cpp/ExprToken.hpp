@@ -30,7 +30,7 @@ public:
 
     bool hasSubExpr = false;
     int intVal = UNDEFINED;
-    MathOperation mathOperation;
+    MathOperation mathOperation = Invalid;
 
     static std::string exprString(ExprToken exprToken) {
         if (exprToken.intVal == -999) {

@@ -16,7 +16,8 @@ typedef enum {
     Multiplication,
     Exponent,
     Modulus,
-    Division
+    Division,
+    Invalid
 } MathOperation;
 
 typedef enum {

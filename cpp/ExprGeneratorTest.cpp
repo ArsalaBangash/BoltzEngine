@@ -35,10 +35,16 @@ int main() {
     time_t stop_s = clock();
     cout << "time: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 << endl;
 
-
     BinaryChallenge *binary = BinaryChallenge::generateBinaryQuestion(Normal);
 
     cout << binary->binary << " : " << binary->decimal << endl;
+
+    std::stack<std::string> ss;
+    ss.push("a");
+    ss.push("b");
+    std::string s("hi");
+    s.append("ayy lmao");
+    s.append(ss.top());
 
     FactorizationGenerator *fact = new FactorizationGenerator();
     fact->getExpandedParams("1+2-3");

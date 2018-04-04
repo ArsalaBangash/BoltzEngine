@@ -10,6 +10,8 @@
 #define EngineUtils_hpp
 
 #include <random>
+#include <string>
+#include <stack>
 
 double random(int min, int max);
 
@@ -22,5 +24,7 @@ int generatePositiveRandom(int min, int max);
 int generatePositiveRandom(int max);
 
 int generatePosNegRandom(int range);
+
+std::string getAndPop(std::stack<std::string>);
 
 #endif /* EngineUtils_hpp */
