@@ -5,6 +5,7 @@
 #ifndef BOLTZENGINE_LATEXCONVERTER_HPP
 #define BOLTZENGINE_LATEXCONVERTER_HPP
 
+#include <boost/algorithm/string.hpp>
 #include <map>
 #include <stack>
 #include <string>
@@ -21,25 +22,25 @@ public:
     std::string factorToLatex(std::vector<int>);
 
 private:
-    std::map<MathOperation, std::string(*)(std::stack<std::string>)> opRepresentationMap;
+    std::map<MathOperation, std::function<std::string(std::stack<std::string>)>> opRepresentationMap;
 
-    auto addLatex = [](std::stack<std::string> exprStack) {
+    std::function<std::string(std::stack<std::string>)> addLatex = [](std::stack<std::string> exprStack) -> std::string  {
         return std::string("(").append(getAndPop(exprStack)).append("+").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    auto subLatex = [](std::stack<std::string> exprStack) {
+    std::function<std::string(std::stack<std::string>)> subLatex = [](std::stack<std::string> exprStack) -> std::string {
         return std::string("(").append(getAndPop(exprStack)).append("-").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    auto multLatex = [](std::stack<std::string> exprStack) {
+    std::function<std::string(std::stack<std::string>)> multLatex = [](std::stack<std::string> exprStack) -> std::string {
         return std::string("(").append(getAndPop(exprStack)).append("\\times").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    auto modLatex = [](std::stack<std::string> exprStack) {
+    std::function<std::string(std::stack<std::string>)> modLatex = [](std::stack<std::string> exprStack) -> std::string {
         return std::string("(").append(getAndPop(exprStack)).append(" \\% ").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    auto divLatex = [](std::stack<std::string> exprStack) {
+    std::function<std::string(std::stack<std::string>)> divLatex = [](std::stack<std::string> exprStack) -> std::string {
         std::string dividend = getAndPop(exprStack);
         std::string divisor = getAndPop(exprStack);
         if (boost::starts_with(dividend, "\\frac") || boost::starts_with(divisor, "\\frac"))
@@ -48,7 +49,7 @@ private:
             return std::string("\\frac{").append(dividend).append("}{").append(divisor).append("}");
     };
 
-    std::string parenthesizeNegative(std::string);
+    static std::string parenthesizeNegative(std::string);
 };
 
 #endif //BOLTZENGINE_LATEXCONVERTER_HPP

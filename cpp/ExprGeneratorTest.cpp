@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "ExprGenerator.hpp"
 #include "AdditionExpr.hpp"
 #include "SubtractionExpr.hpp"
@@ -6,6 +7,7 @@
 #include "BinaryGenerator.hpp"
 #include "FactorizationGenerator.hpp"
 #include "InfixConverter.h"
+#include "LatexConverter.hpp"
 
 using namespace std;
 
@@ -39,15 +41,13 @@ int main() {
 
     cout << binary->binary << " : " << binary->decimal << endl;
 
-    std::stack<std::string> ss;
-    ss.push("a");
-    ss.push("b");
-    std::string s("hi");
-    s.append("ayy lmao");
-    s.append(ss.top());
+    auto *fact = new FactorizationGenerator();
+    vector<int> int_list = fact->getExpandedParams("1+2-3");
 
-    FactorizationGenerator *fact = new FactorizationGenerator();
-    fact->getExpandedParams("1+2-3");
+    auto *lc = new LatexConverter();
+    std::vector<ExprToken> lcExprTest = ExprGenerator::generateExpression(operations, Normal);
+    std::string lcExprOutput = lc->exprToLatex(lcExprTest);
+    cout << lcExprOutput << endl;
 
     cout << "exprToken generated successfully\n";
 

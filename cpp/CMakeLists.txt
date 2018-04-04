@@ -15,7 +15,7 @@ if (Boost_FOUND)
 
     include_directories(${Boost_INCLUDE_DIRS})
 
-    add_executable(ExprGeneratorTest InfixConverter.cpp ExprGeneratorTest.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp FactorizationGenerator.cpp FactorizationGenerator.hpp LatexConverter.cpp LatexConverter.hpp)
+    add_executable(ExprGeneratorTest InfixConverter.cpp ExprGeneratorTest.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp FactorizationGenerator.cpp FactorizationGenerator.hpp LatexConverter.cpp LatexConverter.hpp LatexConverter.cpp)
 
     target_link_libraries(ExprGeneratorTest ${Boost_LIBRARIES})
 endif()
