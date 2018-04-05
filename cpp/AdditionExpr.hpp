@@ -14,18 +14,18 @@
 
 class AdditionExpr : public MathExpr {
 public:
-    AdditionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
+    explicit AdditionExpr(MathOperation mathOperation) : MathExpr(mathOperation) {}
 
 protected:
-    void setMax(Level);
+    void setMax(Level) override;
 
-    void addZeroBoundTokens(SubExprLocation);
+    void addZeroBoundTokens(SubExprLocation) override;
 
-    void noSubExpressions();
+    void noSubExpressions() override;
 
-    void twoSubExpressions();
+    void twoSubExpressions() override;
 
-    void oneSubExpression(SubExprLocation);
+    void oneSubExpression(SubExprLocation) override;
 };
 
 #endif /* AdditionExpr_hpp */

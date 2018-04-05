@@ -8,6 +8,9 @@
 #include "FactorizationGenerator.hpp"
 #include "InfixConverter.h"
 #include "LatexConverter.hpp"
+#include "symbolicc++.h"
+#include "exprtk.hpp"
+
 
 using namespace std;
 
@@ -19,7 +22,7 @@ double testTime(long numExpressions, const std::vector<MathOperation> &operation
     clock::time_point start = clock::now();
     while (numExpressions > 0) {
         std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
-//        cout << infixConverter->exprToInfix(exprTokens) << endl;
+////        cout << infixConverter->exprToInfix(exprTokens) << endl;
         numExpressions--;
     }
     clock::time_point end = clock::now();
@@ -27,54 +30,37 @@ double testTime(long numExpressions, const std::vector<MathOperation> &operation
     return execution_time.count();
 }
 
-int main() {\
-
+void testEvalEngine() {
     std::vector<MathOperation> operations;
     operations.emplace_back(Addition);
-    operations.emplace_back(Addition);
-    operations.emplace_back(Addition);
-//    operations.emplace_back(Subtraction);
-//    operations.emplace_back(Multiplication);
-//    operations.emplace_back(Division);
-
+    operations.emplace_back(Multiplication);
+    operations.emplace_back(Division);
     InfixConverter *infixConverter = new InfixConverter;
+    std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
+    std::string expression_string = infixConverter->exprToInfix(exprTokens);
+    cout << expression_string;
 
-//    time_t start_s = clock();
-//    // the code you wish to time goes here
-//
-//    int i = 100000;
-//    while (i > 0) {
-//        std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
-////        cout << infixConverter->exprToInfix(exprTokens) << endl;
-//        i--;
-//    }
-//    time_t stop_s = clock();
-//    cout << "time: " << (stop_s - start_s) / double(CLOCKS_PER_SEC) * 1000 << endl;
+}
+
+void benchmark() {
+    std::vector<MathOperation> operations;
+    operations.emplace_back(Addition);
+    operations.emplace_back(Multiplication);
+    operations.emplace_back(Division);
 
     long numExpressions = 100000;
     long acc = 0L;
-    int i = 5;
+    int i = 10;
     while (i > 0) {
         acc += testTime(numExpressions, operations) / 1000000;
         i--;
     }
-    acc = acc / 5;
+    acc = acc / 10;
     cout << "time: " << acc << endl;
+}
 
-
-//    BinaryChallenge *binary = BinaryChallenge::generateBinaryQuestion(Normal);
-//
-//    cout << binary->binary << " : " << binary->decimal << endl;
-//
-//    auto *fact = new FactorizationGenerator();
-//    vector<int> int_list = fact->getExpandedParams("1+2-3");
-
-//    auto *lc = new LatexConverter();
-//    std::vector<ExprToken> lcExprTest = ExprGenerator::generateExpression(operations, Normal);
-//    std::string lcExprOutput = lc->exprToLatex(lcExprTest);
-//    cout << lcExprOutput << endl;
-
-    cout << "exprToken generated successfully\n";
+int main() {
+    testEvalEngine();
 
     return 0;
 }

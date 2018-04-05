@@ -18,7 +18,7 @@ MathExpr::MathExpr(MathOperation mathOperation) {
 }
 
 std::vector<ExprToken> MathExpr::produceExpression(SubExprLocation subExprLocation) {
-    expression.push_back(ExprToken(this->mathOperation));
+    expression.emplace_back(ExprToken(this->mathOperation));
     if (isBounded && bound == 0)
         this->addZeroBoundTokens(subExprLocation);
     else {

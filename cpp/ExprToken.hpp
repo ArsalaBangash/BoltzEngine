@@ -22,11 +22,11 @@ public:
 
     ExprToken(int intVal, bool hasSubExpr);
 
-    ExprToken(int intVal);
+    explicit ExprToken(int intVal);
 
-    ExprToken(MathOperation mathOperation);
+    explicit ExprToken(MathOperation mathOperation);
 
-    ExprToken(bool hasSubExpr);
+    explicit ExprToken(bool hasSubExpr);
 
     bool hasSubExpr = false;
     int intVal = UNDEFINED;

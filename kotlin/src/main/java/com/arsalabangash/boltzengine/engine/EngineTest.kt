@@ -34,9 +34,8 @@ fun main(args: Array<String>) {
 fun testTime(numExpressions: Long): Long {
     val startTime = System.currentTimeMillis()
     for (i in 1..numExpressions) {
-        val ops = arrayListOf<MathOperation>(MathOperation.Addition)
-//        val ops = arrayListOf<MathOperation>(MathOperation.Addition, MathOperation.Subtraction,
-//                MathOperation.Division, MathOperation.Multiplication)
+        val ops = arrayListOf<MathOperation>(MathOperation.Addition, MathOperation.Subtraction,
+                MathOperation.Division, MathOperation.Multiplication)
 //        printExpr(gen.generateExpression(ops, Level.Advanced))
         gen.generateExpression(ops, Level.Advanced)
     }

@@ -77,12 +77,13 @@ std::vector<ExprToken> ExprGenerator::generateExpression(std::vector<MathOperati
         subExprLocation = getEmptyTokenLocations(operationsLeft);
         expression = exprWithSub->leftSide;
 
-        // Add the newly generated sub expression to the global expression
+        //Add the newly generated sub expression to the global expression
         if (exprWithSub->bound != -999)
             expr = MathExpr::ExpressionFactory::createExpression(currentOp, exprWithSub->bound, level);
         else
             expr = MathExpr::ExpressionFactory::createExpression(currentOp, -999, level);
         newExpr = expr->produceExpression(subExprLocation);
+
         for (auto token: newExpr) {
             expression.emplace_back(token);
         }
@@ -113,7 +114,7 @@ ExprGenerator::ExprWithSub *ExprGenerator::checkSubExprTokens(std::vector<ExprTo
             expressionList.erase(expressionList.begin() + i);
             vector<ExprToken> preEmptyTokens;
             for (int c = 0; c < i; c++) {
-                preEmptyTokens.push_back(expressionList[c]);
+                preEmptyTokens.emplace_back(expressionList[c]);
             }
             vector<ExprToken> postEmptyTokens;
             for (int c = i; c < expressionList.size(); c++) {
