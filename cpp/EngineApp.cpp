@@ -99,8 +99,8 @@ void runApp() {
     std::cout << "Your answer was " << answerCheck << std::endl;
 }
 
-int main() {
-    while (true) {
-        runApp();
-    }
-}
+//int main() {
+//    while (true) {
+//        runApp();
+//    }
+//}
