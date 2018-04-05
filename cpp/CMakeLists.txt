@@ -24,6 +24,9 @@ if (Boost_FOUND)
     add_executable(ExprGeneratorTest InfixConverter.cpp ExprGeneratorTest.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp FactorizationGenerator.cpp FactorizationGenerator.hpp LatexConverter.cpp LatexConverter.hpp LatexConverter.cpp HexGenerator.cpp HexGenerator.hpp)
 
     target_link_libraries(ExprGeneratorTest ${Boost_LIBRARIES})
+
+    add_executable(exprtk_test exprtk_test.cpp exprtk.hpp LatexConverter.hpp InfixConverter.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp)
+
+    target_link_libraries(exprtk_test ${Boost_LIBRARIES})
 endif ()
 
-add_executable(exprtk_test exprtk_test.cpp exprtk.hpp InfixConverter.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp)
