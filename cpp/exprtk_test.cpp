@@ -18,7 +18,6 @@
 
 #include <cstdio>
 #include <string>
-
 #include "exprtk.hpp"
 #include <iostream>
 #include <vector>
@@ -51,7 +50,7 @@ void expression() {
 
 
     std::string expression_string = genExpr();
-    cout << expression_string << " =  ";
+    std::cout << expression_string << " =  ";
 
     expression_t expression;
 
@@ -59,7 +58,7 @@ void expression() {
     parser.compile(expression_string, expression);
 
     T y = expression.value();
-    cout << y << endl;
+    std::cout << y << std::endl;
 }
 
 int main() {
