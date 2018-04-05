@@ -5,7 +5,6 @@
 #ifndef BOLTZENGINE_LATEXCONVERTER_HPP
 #define BOLTZENGINE_LATEXCONVERTER_HPP
 
-#include <boost/algorithm/string.hpp>
 #include <map>
 #include <stack>
 #include <string>
@@ -41,9 +40,11 @@ private:
     };
 
     std::function<std::string(std::stack<std::string>*)> divLatex = [](std::stack<std::string> *exprStack) -> std::string {
+        std::string prefix = "\\frac";
         std::string dividend = getAndPop(exprStack);
         std::string divisor = getAndPop(exprStack);
-        if (boost::starts_with(dividend, "\\frac") || boost::starts_with(divisor, "\\frac"))
+        if (!divisor.compare(0, prefix.size(), prefix) ||
+            !dividend.compare(0, prefix.size(), prefix))
             return std::string(dividend).append(" \\div ").append(divisor);
         else
             return std::string("\\frac{").append(dividend).append("}{").append(divisor).append("}");

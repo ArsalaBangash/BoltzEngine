@@ -2,7 +2,6 @@
 // Created by KyoKeun Park on 2018-04-03.
 //
 
-#include <boost/algorithm/string.hpp>
 #include <iostream>
 #include "LatexConverter.hpp"
 #include <vector>
@@ -26,7 +25,7 @@ std::string LatexConverter::exprToLatex(std::vector<ExprToken> expressions) {
     }
 
     std::string latexExpr = getAndPop(expressionStack);
-    if (boost::starts_with(latexExpr, "(") && boost::ends_with(latexExpr, ")"))
+    if (latexExpr[0] == '(' || latexExpr[latexExpr.size() - 1] == ')')
         return std::string("$$").append(latexExpr.substr(1, latexExpr.size() - 2)).append("$$");
     else return std::string("$$").append(latexExpr).append("$$");
 }
@@ -48,7 +47,7 @@ std::string LatexConverter::factorToLatex(std::vector<int> &expandedParams) {
 }
 
 std::string LatexConverter::parenthesizeNegative(std::string number) {
-    if (boost::starts_with(number, "-"))
+    if (number[0] == '-')
         return std::string("(").append(number).append(")");
     else
         return number;

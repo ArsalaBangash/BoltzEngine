@@ -12,6 +12,8 @@
 #include <random>
 #include <string>
 #include <stack>
+#include <vector>
+#include <sstream>
 
 double random(int min, int max);
 
@@ -26,5 +28,7 @@ int generatePositiveRandom(int max);
 int generatePosNegRandom(int range);
 
 std::string getAndPop(std::stack<std::string>*);
+
+std::vector<std::string> split(std::string&, char delim);
 
 #endif /* EngineUtils_hpp */

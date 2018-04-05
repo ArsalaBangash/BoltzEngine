@@ -85,5 +85,9 @@ int main() {
     /*
      * Call the function you woiuld like to test here
      */
+    FactorizationGenerator fg;
+    std::vector<int> arr = fg.getExpandedParams("x^2 + 123x - 7");
+    for (int i = 0; i < arr.size(); i++)
+        cout << arr[i] << " " << endl;
     return 0;
 }

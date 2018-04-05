@@ -43,6 +43,17 @@ int generatePosNegRandom(int range) {
 std::string getAndPop(std::stack<std::string> *strStack) {
     std::string tmp(strStack->top());
     strStack->pop();
-    //std::cout << "Before pop: " << tmp << "\tAfter pop: " << strStack->top() << std::endl;
     return tmp;
+}
+
+/*
+ * Splits the given string by whitespace
+ */
+std::vector<std::string> split(std::string& s, char delim) {
+    std::stringstream ss(s);
+    std::string item;
+    std::vector<std::string> tokens;
+    while(getline(ss, item, delim))
+        tokens.emplace_back(item);
+    return tokens;
 }
