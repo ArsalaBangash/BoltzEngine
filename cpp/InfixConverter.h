@@ -11,9 +11,6 @@
 #include <map>
 #include "ExprToken.hpp"
 #include "MathExpr.hpp"
-#include <boost/assign/list_of.hpp>
-
-using boost::assign::map_list_of;
 
 class InfixConverter {
 

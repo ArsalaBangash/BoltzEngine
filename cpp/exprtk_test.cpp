@@ -41,7 +41,6 @@ std::string genExpr() {
     return expression_string;
 }
 
-
 template<typename T>
 void expression() {
     typedef exprtk::symbol_table<T> symbol_table_t;
@@ -53,12 +52,24 @@ void expression() {
     std::cout << expression_string << " =  ";
 
     expression_t expression;
-
     parser_t parser;
-    parser.compile(expression_string, expression);
-
+    std::string new_expr_string = expression_string;
+    parser.compile(new_expr_string, expression);
     T y = expression.value();
     std::cout << y << std::endl;
+//        if (y == y) {
+//            std::cout << y << std::endl;
+//        } else {
+//            std::cout << 0 << std::endl;
+//        }
+
+//        new_expr_string.append("7t3dvyfceijh8rfu");
+//        std::cout << new_expr_string << std::endl;
+//        parser.compile(new_expr_string, expression);
+//        T z = expression.value();
+//        std::cout << z << std::endl;
+
+
 }
 
 int main() {

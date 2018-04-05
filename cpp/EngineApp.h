@@ -5,10 +5,11 @@
 #ifndef PROJECT_ENGINEAPP_H
 #define PROJECT_ENGINEAPP_H
 
+#include <string>
 
-class EngineApp {
-
+struct ChallengeReps {
+    std::string infixRepr;
+    std::string latexRepr;
 };
-
 
 #endif //PROJECT_ENGINEAPP_H

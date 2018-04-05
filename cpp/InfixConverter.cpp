@@ -5,7 +5,6 @@
 #include <vector>
 #include "InfixConverter.h"
 #include <map>
-#include <boost/format.hpp>
 
 
 InfixConverter::InfixConverter() {
@@ -34,5 +33,7 @@ void InfixConverter::binaryOpToInfix(MathOperation binaryOp, std::stack<std::str
     exprStack->pop();
     std::string right = exprStack->top();
     exprStack->pop();
-    exprStack->push(str(boost::format("(%1% %2% %3%)") % left % opMap.at(binaryOp) % right));
+    std::string expr_string = "(";
+    expr_string.append(left).append(" ").append(opMap.at(binaryOp)).append(" ").append(right).append(")");
+    exprStack->push(expr_string);
 }

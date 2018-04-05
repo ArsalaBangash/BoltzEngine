@@ -26,7 +26,8 @@ if (Boost_FOUND)
     target_link_libraries(ExprGeneratorTest ${Boost_LIBRARIES})
 
     add_executable(exprtk_test exprtk_test.cpp exprtk.hpp LatexConverter.hpp InfixConverter.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp)
-
+    add_executable(EngineApp EngineApp.cpp exprtk.hpp LatexConverter.cpp InfixConverter.cpp ExprGenerator.cpp Enums.h DivisionExpr.cpp ModulusExpr.cpp EngineUtils.cpp MathExpr.cpp SubtractionExpr.cpp MultiplicationExpr.cpp AdditionExpr.cpp ExprToken.cpp BinaryGenerator.cpp)
     target_link_libraries(exprtk_test ${Boost_LIBRARIES})
+    target_link_libraries(EngineApp ${Boost_LIBRARIES})
 endif ()
 
