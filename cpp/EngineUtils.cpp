@@ -7,6 +7,7 @@
 //
 
 #include "EngineUtils.hpp"
+#include <iostream>
 
 double random(int min, int max) {
     std::default_random_engine gen((unsigned int) std::chrono::system_clock::now().time_since_epoch().count());
@@ -39,8 +40,9 @@ int generatePosNegRandom(int range) {
     return (int) random(-range, range);
 }
 
-std::string getAndPop(std::stack<std::string> strStack) {
-    std::string tmp(strStack.top());
-    strStack.pop();
+std::string getAndPop(std::stack<std::string> *strStack) {
+    std::string tmp(strStack->top());
+    strStack->pop();
+    //std::cout << "Before pop: " << tmp << "\tAfter pop: " << strStack->top() << std::endl;
     return tmp;
 }

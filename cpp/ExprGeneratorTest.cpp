@@ -1,28 +1,27 @@
 #include <iostream>
 #include <vector>
-#include "ExprGenerator.hpp"
 #include "AdditionExpr.hpp"
-#include "SubtractionExpr.hpp"
-#include "EngineUtils.hpp"
 #include "BinaryGenerator.hpp"
+#include "EngineUtils.hpp"
+#include "ExprGenerator.hpp"
 #include "FactorizationGenerator.hpp"
+#include "HexGenerator.hpp"
 #include "InfixConverter.h"
 #include "LatexConverter.hpp"
-#include "symbolicc++.h"
+#include "SubtractionExpr.hpp"
 #include "exprtk.hpp"
-
 
 using namespace std;
 
 #include <ctime>
 
-double testTime(long numExpressions, const std::vector<MathOperation> &operations) {
-//    InfixConverter *infixConverter = new InfixConverter;
+double testTime(long numExpressions,
+                const std::vector<MathOperation> &operations) {
     using clock = std::chrono::steady_clock;
     clock::time_point start = clock::now();
     while (numExpressions > 0) {
-        std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
-////        cout << infixConverter->exprToInfix(exprTokens) << endl;
+        std::vector<ExprToken> exprTokens =
+                ExprGenerator::generateExpression(operations, Normal);
         numExpressions--;
     }
     clock::time_point end = clock::now();
@@ -30,16 +29,18 @@ double testTime(long numExpressions, const std::vector<MathOperation> &operation
     return execution_time.count();
 }
 
-void testEvalEngine() {
+void testInfix() {
     std::vector<MathOperation> operations;
     operations.emplace_back(Addition);
+    operations.emplace_back(Subtraction);
     operations.emplace_back(Multiplication);
     operations.emplace_back(Division);
-    InfixConverter *infixConverter = new InfixConverter;
-    std::vector<ExprToken> exprTokens = ExprGenerator::generateExpression(operations, Normal);
-    std::string expression_string = infixConverter->exprToInfix(exprTokens);
-    cout << expression_string;
 
+    InfixConverter *infixConverter = new InfixConverter;
+    std::vector<ExprToken> exprTokens =
+            ExprGenerator::generateExpression(operations, Normal);
+    std::string expression_string = infixConverter->exprToInfix(exprTokens);
+    cout << expression_string << endl;
 }
 
 void benchmark() {
@@ -59,10 +60,30 @@ void benchmark() {
     cout << "time: " << acc << endl;
 }
 
-int main() {
-    testEvalEngine();
-
-    return 0;
+void testHex() {
+    HexChallenge hc = generateHexQuestion(Advanced);
+    cout << hc.decimal << "\t" << hc.hex << endl;
 }
 
+void testLatex() {
+    std::vector<MathOperation> operations;
+    operations.emplace_back(Addition);
+    operations.emplace_back(Multiplication);
+    operations.emplace_back(Division);
+    auto *lc = new LatexConverter();
+    auto *ic = new InfixConverter();
+    std::vector<ExprToken> exprTokens =
+            ExprGenerator::generateExpression(operations, Basic);
 
+    std::string icExprOutput = ic->exprToInfix(exprTokens);
+    std::string lcExprOutput = lc->exprToLatex(exprTokens);
+    cout << "\n" << lcExprOutput << endl;
+    cout << icExprOutput << endl;
+}
+
+int main() {
+    /*
+     * Call the function you woiuld like to test here
+     */
+    return 0;
+}

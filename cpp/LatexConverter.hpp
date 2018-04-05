@@ -18,29 +18,29 @@ class LatexConverter {
 
 public:
     LatexConverter();
-    std::string exprToLatex(std::vector<ExprToken>&);
+    std::string exprToLatex(std::vector<ExprToken>);
     std::string factorToLatex(std::vector<int>&);
 
 private:
-    std::map<MathOperation, std::function<std::string(std::stack<std::string>)>> opRepresentationMap;
+    std::map<MathOperation, std::function<std::string(std::stack<std::string>*)>> opRepresentationMap;
 
-    std::function<std::string(std::stack<std::string>)> addLatex = [](std::stack<std::string> exprStack) -> std::string  {
+    std::function<std::string(std::stack<std::string>*)> addLatex = [](std::stack<std::string> *exprStack) -> std::string  {
         return std::string("(").append(getAndPop(exprStack)).append("+").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    std::function<std::string(std::stack<std::string>)> subLatex = [](std::stack<std::string> exprStack) -> std::string {
+    std::function<std::string(std::stack<std::string>*)> subLatex = [](std::stack<std::string> *exprStack) -> std::string {
         return std::string("(").append(getAndPop(exprStack)).append("-").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    std::function<std::string(std::stack<std::string>)> multLatex = [](std::stack<std::string> exprStack) -> std::string {
+    std::function<std::string(std::stack<std::string>*)> multLatex = [](std::stack<std::string> *exprStack) -> std::string {
         return std::string("(").append(getAndPop(exprStack)).append("\\times").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    std::function<std::string(std::stack<std::string>)> modLatex = [](std::stack<std::string> exprStack) -> std::string {
+    std::function<std::string(std::stack<std::string>*)> modLatex = [](std::stack<std::string> *exprStack) -> std::string {
         return std::string("(").append(getAndPop(exprStack)).append(" \\% ").append(parenthesizeNegative(getAndPop(exprStack))).append(")");
     };
 
-    std::function<std::string(std::stack<std::string>)> divLatex = [](std::stack<std::string> exprStack) -> std::string {
+    std::function<std::string(std::stack<std::string>*)> divLatex = [](std::stack<std::string> *exprStack) -> std::string {
         std::string dividend = getAndPop(exprStack);
         std::string divisor = getAndPop(exprStack);
         if (boost::starts_with(dividend, "\\frac") || boost::starts_with(divisor, "\\frac"))
