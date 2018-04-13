@@ -90,5 +90,7 @@ void ModulusExpr::oneSubExpression(SubExprLocation subExprLocation) {
             expression.push_back(ExprToken(dividend));
             expression.push_back(ExprToken(divisor, true));
             break;
+		default :
+			break;
     }
 }
