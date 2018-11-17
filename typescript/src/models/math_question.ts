@@ -2,23 +2,20 @@ export enum MathQuestionType {
   Expression,
   Factorization,
   Binary,
-  Hexadecimal
+  Hexadecimal,
 }
 
 export enum Difficulty {
   Basic,
   Normal,
-  Advanced
+  Advanced,
 }
 
-export interface MathQuestionModel {
+export interface ChallengeModel {
   type: MathQuestionType;
   difficulty: Difficulty;
+  infix: string;
+  latex: string;
 }
 
-export interface MathQuestionGenerator {
-  generateQuestion: (difficulty: Difficulty) => MathQuestionModel,
-  generateInfix: () => string,
-  generateLatex: () => string,
-
-}
+export type GenerateChallenge = (difficulty: Difficulty) => ChallengeModel;

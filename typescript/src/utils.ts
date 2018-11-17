@@ -3,5 +3,5 @@ export function random(min: number, max: number): number {
 }
 
 export function positiveRandom(max: number): number {
-  return random(1, max)
+  return random(1, max);
 }
