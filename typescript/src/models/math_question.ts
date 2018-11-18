@@ -6,9 +6,9 @@ export enum MathQuestionType {
 }
 
 export enum Difficulty {
-  Basic,
-  Normal,
-  Advanced,
+  Basic = 'basic',
+  Normal = 'normal',
+  Advanced = 'advanced',
 }
 
 export interface ChallengeModel {
@@ -18,4 +18,4 @@ export interface ChallengeModel {
   latex: string;
 }
 
-export type GenerateChallenge = (difficulty: Difficulty) => ChallengeModel;
+export type GenerateChallenge = (difficulty: Difficulty, params: any) => ChallengeModel;

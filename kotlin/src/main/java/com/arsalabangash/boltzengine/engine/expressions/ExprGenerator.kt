@@ -53,7 +53,8 @@ class ExprGenerator {
         }
     }
 
-    fun generateExpression(operations: ArrayList<MathOperation>, level: Level): ArrayList<ExprToken> {
+    fun generateExpression(ops: ArrayList<MathOperation>, level: Level): ArrayList<ExprToken> {
+        
         var operationsLeft = operations.size
         var expressionList = ArrayList<ExprToken>()
         var currentOp: MathOperation = operations[randomGenerator.nextInt(operations.size)]

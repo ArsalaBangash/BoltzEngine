@@ -1,9 +1,5 @@
-import {
-  Difficulty,
-  GenerateChallenge,
-  MathQuestionType,
-} from '../models/math_question';
-import { positiveRandom } from '../utils';
+import { Difficulty, GenerateChallenge, MathQuestionType } from '../models/math_question';
+import { positiveRandomNum } from '../utils';
 
 interface FactorizationModel {
   xCoeff1: number;
@@ -17,15 +13,13 @@ interface FactorizationRandomBounds {
   constMax: number;
 }
 
-export const generateFactorizationChallenge: GenerateChallenge = (
-  difficulty: Difficulty
-) => {
+export const generateFactorizationChallenge: GenerateChallenge = (difficulty: Difficulty) => {
   const randomBounds = getRandomBounds(difficulty);
   const model: FactorizationModel = {
-    const1: positiveRandom(randomBounds.xCoeffMax),
-    const2: positiveRandom(randomBounds.xCoeffMax),
-    xCoeff1: positiveRandom(randomBounds.xCoeffMax),
-    xCoeff2: positiveRandom(randomBounds.xCoeffMax),
+    const1: positiveRandomNum(randomBounds.xCoeffMax),
+    const2: positiveRandomNum(randomBounds.xCoeffMax),
+    xCoeff1: positiveRandomNum(randomBounds.xCoeffMax),
+    xCoeff2: positiveRandomNum(randomBounds.xCoeffMax),
   };
   return {
     difficulty,
@@ -50,9 +44,7 @@ const getRandomBounds = (difficulty: Difficulty): FactorizationRandomBounds => {
 };
 
 const factorizationInfix = (model: FactorizationModel): string => {
-  return `(${model.xCoeff1}x + ${model.const1})*(${model.xCoeff2}x + ${
-    model.const2
-  })`;
+  return `(${model.xCoeff1}x + ${model.const1})*(${model.xCoeff2}x + ${model.const2})`;
 };
 
 const factorizationLatex = (model: FactorizationModel): string => {
@@ -60,15 +52,12 @@ const factorizationLatex = (model: FactorizationModel): string => {
   const b = model.xCoeff1 * model.const2 + model.xCoeff2 * model.const1;
   const c = model.const1 * model.const2;
   let factorLatex = '$$';
-  factorLatex =
-    a === 1 ? factorLatex.concat('x^{2}') : factorLatex.concat(`${a}x^{2}`);
+  factorLatex = a === 1 ? factorLatex.concat('x^{2}') : factorLatex.concat(`${a}x^{2}`);
   if (b !== 0) {
-    factorLatex =
-      b > 0 ? factorLatex.concat(` + ${b}x`) : factorLatex.concat(` ${b}x`);
+    factorLatex = b > 0 ? factorLatex.concat(` + ${b}x`) : factorLatex.concat(` ${b}x`);
   }
   if (c !== 0) {
-    factorLatex =
-      c > 0 ? factorLatex.concat(` + ${c}`) : factorLatex.concat(` c`);
+    factorLatex = c > 0 ? factorLatex.concat(` + ${c}`) : factorLatex.concat(` c`);
   }
   return factorLatex.concat('$$');
 };

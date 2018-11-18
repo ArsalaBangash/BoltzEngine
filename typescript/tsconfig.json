@@ -14,7 +14,8 @@
     "inlineSourceMap": true,
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "src/**/*"

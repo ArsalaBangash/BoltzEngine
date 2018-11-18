@@ -1,7 +1,9 @@
 {
-  "extends": ["tslint:latest", "tslint-config-prettier"],
   "rules": {
     "interface-name": [true, "never-prefix"],
-    "no-console": [false, "log", "error"]
-  }
+    "no-console": [false, "log", "error"],
+    "variable-name": false
+  },
+  "autoFixOnSave": true,
+  "extends": ["tslint:latest", "tslint-config-prettier"]
 }
