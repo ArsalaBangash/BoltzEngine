@@ -98,7 +98,7 @@ const _getRightSubExprTokens = (expr: Expr): ExprToken[] => {
   } else {
     const subExprToken: SubExprToken = getSubExprToken(expr);
     const randomToken: ExprToken = _getRandomToken(expr);
-    return tokens.concat([subExprToken, randomToken]);
+    return tokens.concat([randomToken, subExprToken]);
   }
 };
 
