@@ -18,11 +18,6 @@ const difficultyBounds: DifficultyBounds = {
   advanced: { min: 20, max: 100 },
 };
 
-const _getRandomToken = (expr: Expr): ExprToken => {
-  const randomValue = randomNum(difficultyBounds[expr.diff].min, difficultyBounds[expr.diff].max);
-  return { type: TokenType.Number, value: randomValue };
-};
-
 const _getZeroBoundTokens = (expr: Expr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   const randomValue = randomNum(difficultyBounds[expr.diff].min, difficultyBounds[expr.diff].max);

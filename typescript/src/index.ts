@@ -11,6 +11,8 @@ console.log(basic);
 console.log(normal);
 console.log(advanced);
 
-console.log(getChallengeTokens([Operator.Subtraction, Operator.Addition, Operator.Addition], Difficulty.Basic));
-console.log(getChallengeTokens([Operator.Subtraction, Operator.Addition, Operator.Addition], Difficulty.Normal));
-console.log(getChallengeTokens([Operator.Subtraction, Operator.Addition, Operator.Addition], Difficulty.Advanced));
+console.log(getChallengeTokens([Operator.Subtraction, Operator.Mutliplication, Operator.Addition], Difficulty.Basic));
+console.log(getChallengeTokens([Operator.Subtraction, Operator.Mutliplication, Operator.Addition], Difficulty.Normal));
+console.log(
+  getChallengeTokens([Operator.Subtraction, Operator.Mutliplication, Operator.Addition], Difficulty.Advanced)
+);
