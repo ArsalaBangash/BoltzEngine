@@ -19,7 +19,7 @@ const difficultyBounds: DifficultyBounds = {
   advanced: { min: 20, max: 100 },
 };
 
-const _getZeroBoundTokens = (expr: Expr): ExprToken[] => {
+const _getZeroBoundTokens = (expr: BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   const zeroToken = { type: TokenType.Number, value: 0 };
   const zeroBoundedToken: SubExprToken = { type: TokenType.SubExpr, value: 0, bounded: true };
@@ -39,8 +39,8 @@ const _getZeroBoundTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getBoundedComplementTokens = (expr: Expr): BoundedComplementTokens => {
-  const bound = (expr as BoundedExpr).bound;
+const _getBoundedComplementTokens = (expr: BoundedExpr): BoundedComplementTokens => {
+  const bound = expr.bound;
   const boundedRandom = randomNum(difficultyBounds[expr.diff].min, bound);
   return {
     boundedToken: { type: TokenType.Number, value: boundedRandom },
@@ -53,10 +53,10 @@ const _getRandomToken = (expr: Expr): ExprToken => {
   return { type: TokenType.Number, value: randomValue };
 };
 
-const _getNoSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getNoSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
-    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr);
+    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr as BoundedExpr);
     return tokens.concat([bcTokens.boundedToken, bcTokens.complementToken]);
   } else {
     const randomToken = _getRandomToken(expr);
@@ -64,10 +64,10 @@ const _getNoSubExprTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getBothSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getBothSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
-    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr);
+    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr as BoundedExpr);
     const boundedSubExprToken: SubExprToken = { type: TokenType.SubExpr, bounded: true, ...bcTokens.boundedToken };
     return tokens.concat([boundedSubExprToken, bcTokens.complementToken]);
   } else {
@@ -76,10 +76,10 @@ const _getBothSubExprTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getLeftSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getLeftSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
-    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr);
+    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr as BoundedExpr);
     const boundedSubExprToken: SubExprToken = { type: TokenType.SubExpr, bounded: true, ...bcTokens.boundedToken };
     return tokens.concat([boundedSubExprToken, bcTokens.complementToken]);
   } else {
@@ -89,10 +89,10 @@ const _getLeftSubExprTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getRightSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getRightSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
-    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr);
+    const bcTokens: BoundedComplementTokens = _getBoundedComplementTokens(expr as BoundedExpr);
     const boundedSubExprToken: SubExprToken = { type: TokenType.SubExpr, bounded: true, ...bcTokens.boundedToken };
     return tokens.concat([boundedSubExprToken, bcTokens.complementToken]);
   } else {

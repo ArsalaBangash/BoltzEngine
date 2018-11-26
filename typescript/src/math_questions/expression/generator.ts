@@ -27,7 +27,7 @@ const getSubExprLocations = (opsLeft: number): SubExprLocation => {
   }
 };
 
-const getExprTokens = (expr: Expr): ExprToken[] => {
+const getExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   switch (expr.op) {
     case Operator.Addition: {
       return getAdditionExprTokens(expr);
@@ -56,6 +56,7 @@ export const getChallengeTokens = (operators: Operator[], diff: Difficulty): Exp
     subExprLocation = getSubExprLocations(opsLeft);
     const subExprToken: SubExprToken = expr[subExprIndex] as SubExprToken;
     const subExpr: ExprToken[] = getExprTokens({
+      bound: subExprToken.value,
       diff,
       isBounded: subExprToken.bounded,
       op: currentOp,

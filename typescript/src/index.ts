@@ -1,3 +1,4 @@
+import { generateExpressionChallenge } from './math_questions/expression';
 import { getChallengeTokens } from './math_questions/expression/generator';
 import { Operator } from './math_questions/expression/models';
 import { generateFactorizationChallenge } from './math_questions/factorization';
@@ -16,3 +17,27 @@ console.log(getChallengeTokens([Operator.Subtraction, Operator.Mutliplication, O
 console.log(
   getChallengeTokens([Operator.Subtraction, Operator.Mutliplication, Operator.Addition], Difficulty.Advanced)
 );
+
+let i = 0;
+while (i < 10) {
+  const b = generateExpressionChallenge(Difficulty.Basic, [
+    Operator.Subtraction,
+    Operator.Mutliplication,
+    Operator.Addition,
+  ]);
+  const n = generateExpressionChallenge(Difficulty.Normal, [
+    Operator.Subtraction,
+    Operator.Mutliplication,
+    Operator.Addition,
+  ]);
+  const a = generateExpressionChallenge(Difficulty.Advanced, [
+    Operator.Subtraction,
+    Operator.Mutliplication,
+    Operator.Addition,
+  ]);
+
+  console.log(b);
+  console.log(n);
+  console.log(a);
+  i++;
+}

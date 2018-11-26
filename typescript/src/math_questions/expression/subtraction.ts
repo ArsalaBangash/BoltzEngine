@@ -18,7 +18,7 @@ const difficultyBounds: DifficultyBounds = {
   advanced: { min: 20, max: 100 },
 };
 
-const _getZeroBoundTokens = (expr: Expr): ExprToken[] => {
+const _getZeroBoundTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   const randomValue = randomNum(difficultyBounds[expr.diff].min, difficultyBounds[expr.diff].max);
   const randomToken: ExprToken = { type: TokenType.Number, value: randomValue };
@@ -39,7 +39,7 @@ const _getZeroBoundTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getNoSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getNoSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
     const boundedExpr = expr as BoundedExpr;
@@ -62,7 +62,7 @@ const _getNoSubExprTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getBothSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getBothSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
     const boundedExpr = expr as BoundedExpr;
@@ -81,7 +81,7 @@ const _getBothSubExprTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getLeftSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getLeftSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
     const boundedExpr = expr as BoundedExpr;
@@ -104,7 +104,7 @@ const _getLeftSubExprTokens = (expr: Expr): ExprToken[] => {
   }
 };
 
-const _getRightSubExprTokens = (expr: Expr): ExprToken[] => {
+const _getRightSubExprTokens = (expr: Expr | BoundedExpr): ExprToken[] => {
   const tokens: ExprToken[] = [];
   if (expr.isBounded) {
     const boundedExpr = expr as BoundedExpr;
