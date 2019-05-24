@@ -28,6 +28,7 @@ fun main(args: Array<String>) {
         acc += testTime(numExpressions)
     }
     println("Generated $numExpressions expressions in " + (acc / 20) + " milliseconds")
+    val b = 100
 
 }
 
