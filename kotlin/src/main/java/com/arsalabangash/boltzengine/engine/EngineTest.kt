@@ -29,6 +29,7 @@ fun main(args: Array<String>) {
     }
     val a = 10
     println("Generated $numExpressions expressions in " + (acc / 20) + " milliseconds")
+    val c = 10000
 
 }
 
