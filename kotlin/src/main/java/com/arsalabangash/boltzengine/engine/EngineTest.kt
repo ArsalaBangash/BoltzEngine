@@ -27,9 +27,9 @@ fun main(args: Array<String>) {
     (1..20).forEach {
         acc += testTime(numExpressions)
     }
-    val a = 10
+    val a = 1000
     println("Generated $numExpressions expressions in " + (acc / 20) + " milliseconds")
-    val c = 10000
+    val b = 3
 
 }
 
